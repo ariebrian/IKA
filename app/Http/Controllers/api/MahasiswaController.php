@@ -39,6 +39,24 @@ class MahasiswaController extends Controller
     public function store(Request $request)
     {
         //
+        $mahasiswa = new Mahasiswa;
+
+        $mahasiswa->id_npm = $request->npm;
+        $mahasiswa->nama = $request->nama;
+        $mahasiswa->bd = $request->tgl;
+        $mahasiswa->alamat_h = $request->alamat;
+        $mahasiswa->angkatan = $request->angkatan;
+        $mahasiswa->peminatan = $request->peminatan;
+        $mahasiswa->thn_lulus = $request->thn_lulus;
+        $mahasiswa->jdl_skripsi = $request->skripsi;
+        $mahasiswa->email = $request->email;
+        $mahasiswa->no_wa = $request->wa;
+        $mahasiswa->link_edin = $request->linked_in;
+
+        $mahasiswa->save();
+
+        return response()->json($mahasiswa, 201);
+
     }
 
     /**
