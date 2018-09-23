@@ -19,5 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/mahasiswa', 'api\MahasiswaController@all');
 Route::get('/profile/{id}', 'api\MahasiswaController@show');
+Route::get('/dosen', 'api\DosenController@all');
 Route::post('/add', 'api\MahasiswaController@store');
+Route::post('/add_dosen', 'api\DosenController@store');
 Route::put('/update/{id}', 'api\MahasiswaController@update');
