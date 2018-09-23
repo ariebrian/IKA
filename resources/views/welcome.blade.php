@@ -4,12 +4,13 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <title>Laravel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
+        
         <!-- Styles -->
         <style>
             html, body {
@@ -63,6 +64,16 @@
                 margin-bottom: 30px;
             }
         </style>
+        <!-- Script -->
+        <script>
+            $(document).ready(function() {
+                $.getJSON("http://localhost:8000/api/mahasiswa", {get_param : 'value'}, function(result){ //get JSON from url
+                        $.each(result, function(index, element){  //loop, element = nama variabel for json result
+                            $('#api').append(element.nama+" "+element.bd+" "); //oouput
+                        });
+                    });
+            });
+        </script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -90,6 +101,7 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <div id="api"></div>
             </div>
         </div>
     </body>
