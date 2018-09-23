@@ -69,6 +69,8 @@ class MahasiswaController extends Controller
     {
         //
         $mahasiswa = Mahasiswa::find($id);
+        
+        // dd($mahasiswa);
 
         return response()->json($mahasiswa,200);
     }
