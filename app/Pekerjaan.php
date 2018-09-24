@@ -7,4 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Pekerjaan extends Model
 {
     //
+    protected $table = 'pekerjaan_mhs';
+
+    public function mahasiswa()
+    {
+        return $this->belongsToMany('App\Mahasiswa');
+    }
 }
