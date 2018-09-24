@@ -70,6 +70,7 @@
                 $.getJSON("http://localhost:8000/api/mahasiswa", {get_param : 'value'}, function(result){ //get JSON from url
                         $.each(result, function(index, element){  //loop, element = nama variabel for json result
                             $('#api').append(element.nama+" "+element.bd+" "); //oouput
+                            $('#api2').append(element.id_npm+" "+element.alamat_h+" ");
                         });
                     });
             });
@@ -102,6 +103,7 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
                 <div id="api"></div>
+                <div id="api2"></div>
             </div>
         </div>
     </body>
