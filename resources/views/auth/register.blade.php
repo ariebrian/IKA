@@ -2,6 +2,21 @@
 
 @section('content')
 <div class="container">
+<div class="alert alert-danger">
+
+
+
+          <ul>
+
+              @foreach ($errors->all() as $error)
+
+              <li>{{ $error }}</li>
+
+              @endforeach
+
+          </ul>
+
+      </div>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -12,14 +27,28 @@
                         @csrf
 
                         <div class="form-group row">
+                            <label for="npm" class="col-md-4 col-form-label text-md-right">{{ __('No Identitas') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="no_identitas" type="text" class="form-control{{ $errors->has('no_identitas') ? ' is-invalid' : '' }}" name="no_identitas" value="{{ old('npm') }}" required autofocus>
+
+                                @if ($errors->has('no_identitas'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('no_identitas') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="nama" type="text" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ old('nama') }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('nama'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('nama') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -58,6 +87,20 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="role" type="text" class="form-control{{ $errors->has('role') ? ' is-invalid' : '' }}" name="role" value="{{ old('role') }}" required autofocus>
+
+                                @if ($errors->has('role'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('role') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 
