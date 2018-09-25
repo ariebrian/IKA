@@ -19,6 +19,10 @@ class MahasiswaController extends Controller
     public function index()
     {
         //
+        // $user = Auth::user();
+        $user = auth()->user();
+        dd($user);
+        print_r($user);
     }
 
     /**
@@ -77,7 +81,7 @@ class MahasiswaController extends Controller
         ];
         // dd($result);
 
-        // $auth = \Auth::user();
+        // $auth = \Auth::id();
         // dd($auth);
 
         return response()->json($mahasiswa,200);

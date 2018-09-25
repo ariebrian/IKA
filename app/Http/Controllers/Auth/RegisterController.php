@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Listeners\SendEmailVerificationNotification;
 
 class RegisterController extends Controller
 {
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/login';
 
     /**
      * Create a new controller instance.
@@ -68,14 +69,15 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         // dd($data);
-        return User::create([
+        $user= User::create([
             'no_identitas' => $data['no_identitas'],
             'nama' => $data['nama'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'role' => $data['role'],
         ]);
-
+        
+        return response()->json($user, 201);
         // $user = new App\User;
 
         // dd($user);
