@@ -1,9 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use App\Pekerjaan;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Exception;
+use Illuminate\Support\Facades\DB;
+
 
 class PekerjaanController extends Controller
 {
@@ -36,6 +40,14 @@ class PekerjaanController extends Controller
     public function store(Request $request)
     {
         //
+        $work = new App\Pekerjaan;
+        $work->tempat_kerja = $request->nama_tempat;
+        $work->alamat_kerja = $request->alamat_kerja;
+
+        // $id = App\Mahasiswa::find(3)->id;
+
+
+        $work->mahasiswa()->attach();
     }
 
     /**
@@ -44,9 +56,13 @@ class PekerjaanController extends Controller
      * @param  \App\Pekerjaan  $pekerjaan
      * @return \Illuminate\Http\Response
      */
-    public function show(Pekerjaan $pekerjaan)
+    public function show($id)
     {
         //
+        $pekerjaan = Pekerjaan::find($id);
+        $work = $pekerjaan->mahasiswa;
+        // dd($work);
+        return response()->json($pekerjaan, 200);
     }
 
     /**

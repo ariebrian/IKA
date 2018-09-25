@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Exception;
 use App\Mahasiswa;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class MahasiswaController extends Controller
 {
@@ -75,6 +76,9 @@ class MahasiswaController extends Controller
             'pekerjaan' => $mhs,
         ];
         // dd($result);
+
+        $auth = \Auth::user();
+        dd($auth);
 
         return response()->json($mahasiswa,200);
     }
