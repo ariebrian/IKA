@@ -77,9 +77,9 @@ class MahasiswaController extends Controller
         ];
         // dd($result);
 
-        $auth = \Auth::user();
-        $id = \Auth::id();
-        dd($auth);
+        // $auth = \Auth::user();
+        // $id = \Auth::id();
+        // dd($auth);
 
         return response()->json($mahasiswa,200);
     }
