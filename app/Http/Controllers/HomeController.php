@@ -25,4 +25,11 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function haha()
+    {
+        $user = auth()->user();
+        dd($user);
+        // return view('home');
+    }
 }

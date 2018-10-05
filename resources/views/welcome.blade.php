@@ -69,8 +69,8 @@
             $(document).ready(function() {
                 $.getJSON("http://localhost:8000/api/mahasiswa", {get_param : 'value'}, function(result){ //get JSON from url
                         $.each(result, function(index, element){  //loop, element = nama variabel for json result
-                            $('#api').append(element.nama+" "+element.bd+" "); //oouput
-                            $('#api2').append(element.id_npm+" "+element.alamat_h+" ");
+                            $('#api').append(element.no_identitas+" "+element.nama+" "); //oouput
+                            $('#api2').append(element.no_identitas+" "+element.mhs_alamat_rmh+" ");
                         });
                     });
             });
