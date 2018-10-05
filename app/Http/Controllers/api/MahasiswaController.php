@@ -16,12 +16,13 @@ class MahasiswaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $user = Auth::user();
+        $user = $request->user();
         // $user = auth()->user();
-        dd($user);
+        $npm = $user->no_identitas;
+        dd($npm);
         print_r($user);
     }
 

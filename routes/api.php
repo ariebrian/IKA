@@ -28,10 +28,13 @@ Route::group([
     ], function() {
         Route::get('logout', 'api\AuthController@logout');
         Route::get('user', 'api\AuthController@user');
+        Route::get('/mahasiswa', 'api\MahasiswaController@all');
+        Route::get('/test2', 'api\MahasiswaController@index');
+
     });
 });
 
-Route::get('/mahasiswa', 'api\MahasiswaController@all');
+// Route::get('/mahasiswa', 'api\MahasiswaController@all');
 Route::get('/test', 'api\MahasiswaController@index');
 Route::get('/profile/{id}', 'api\MahasiswaController@show');
 Route::get('/work/{id}', 'api\PekerjaanController@show');
