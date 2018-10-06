@@ -30,7 +30,8 @@ Route::group([
         Route::get('user', 'api\AuthController@user');
         Route::get('/mahasiswa', 'api\MahasiswaController@all');
         Route::get('/test2', 'api\MahasiswaController@index');
-
+        Route::get('/test3', 'api\PekerjaanController@index');
+        Route::post('/add_work', 'api\PekerjaanController@store');
     });
 });
 

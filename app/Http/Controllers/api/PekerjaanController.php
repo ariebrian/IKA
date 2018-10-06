@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Exception;
 use Illuminate\Support\Facades\DB;
 
+use App\Mahasiswa;
 
 class PekerjaanController extends Controller
 {
@@ -16,9 +17,16 @@ class PekerjaanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
+        $user = $request->user();
+        $uid = $user->no_identitas;
+        // dd($uid);
+        $mhs = Mahasiswa::select('select * from profil_mhs where no_identitas = ?', $uid);
+        // $wid = [$work->id];
+        dd($mhs);
+        return response()->json($mhs,200);
     }
 
     /**
@@ -40,14 +48,25 @@ class PekerjaanController extends Controller
     public function store(Request $request)
     {
         //
-        $work = new App\Pekerjaan;
+        $work = new Pekerjaan;
         $work->tempat_kerja = $request->nama_tempat;
         $work->alamat_kerja = $request->alamat_kerja;
 
+        $user = $request->user();
+        $uid = [$user->no_identitas];
+        $mhs = DB::select('select * from profil_mhs where no_identitas = ?', $uid);
+        // dd($mhs);
+        $mid = $mhs[0]->id;
+        // dd($mid);
+
+        $work->save();
+
         // $id = App\Mahasiswa::find(3)->id;
+        
 
+        $work->mahasiswa()->attach($mid);
 
-        $work->mahasiswa()->attach();
+        return response()->json($work,201);
     }
 
     /**
