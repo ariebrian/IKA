@@ -45,20 +45,24 @@ class MahasiswaController extends Controller
     public function store(Request $request)
     {
         //
+        $user = $request->user();
+        // $npm = $user->no_identitas;
+        // dd($npm);
+
         $mahasiswa = new Mahasiswa;
 
-        $mahasiswa->no_identitas = $request->npm;
-        $mahasiswa->nama = $request->nama;
+        $mahasiswa->no_identitas = $user->no_identitas;
+        $mahasiswa->nama = $user->nama;
         $mahasiswa->mhs_tgl_lahir = $request->tgl;
         $mahasiswa->mhs_alamat_rmh = $request->alamat;
         $mahasiswa->mhs_angkatan = $request->angkatan;
         $mahasiswa->mhs_peminatan = $request->peminatan;
         $mahasiswa->mhs_thn_lulus = $request->thn_lulus;
         $mahasiswa->mhs_skripsi = $request->skripsi;
-        $mahasiswa->email = $request->email;
+        $mahasiswa->email = $user->email;
         $mahasiswa->mhs_no_wa = $request->wa;
         $mahasiswa->mhs_linkedin = $request->linked_in;
-
+        // dd($mahasiswa);
         $mahasiswa->save();
 
         return response()->json($mahasiswa, 201);
@@ -122,8 +126,12 @@ class MahasiswaController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $user = $request->user();
+        $npm = $user->no_identitas;
+        // dd($npm);
+
         $mahasiswa = Mahasiswa::find($id);
-        $mahasiswa->no_identitas = $request->npm;
+        $mahasiswa->no_identitas = $npm;
         $mahasiswa->nama = $request->nama;
         $mahasiswa->mhs_tgl_lahir = $request->tgl;
         $mahasiswa->mhs_alamat_rmh = $request->alamat;

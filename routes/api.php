@@ -32,6 +32,7 @@ Route::group([
         Route::get('/test2', 'api\MahasiswaController@index');
         Route::get('/test3', 'api\PekerjaanController@index');
         Route::post('/add_work', 'api\PekerjaanController@store');
+        Route::post('/add_mhs', 'api\MahasiswaController@store');
     });
 });
 
