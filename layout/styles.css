@@ -1,0 +1,92 @@
+@font-face{
+	font-family: Gothic;
+	src : url(asset/fonts/GOTHIC.TTF);
+}
+@font-face{
+	font-family: SourceSansPro;
+	src : url(asset/fonts/SourceSansPro-Regular.otf);
+}
+.logo {
+	float: left;
+	height: 75px;
+}
+.topnav ul {
+	list-style-type: none;
+	margin: 0;
+	padding-right: 10%;
+	padding-left: 10%;
+	overflow: hidden;
+	background-color: #3e3e3e;
+}
+.topnav li {
+	font-family: Gothic;
+	font-size: 10pt;
+	float: right;
+}
+.topnav li a{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 28px 32px;
+	text-decoration: none;
+}
+.topnav li a:hover:not(.active){
+	background-color: #242424;
+}
+.topnav .active{
+	color: #2f2f2f;
+	background-color: #ffce22;
+}
+
+.bodybg{
+	background-color: #2f2f2f;
+}
+.home{
+	padding-top: 55px;
+	padding-bottom: 55px;
+	font-family: SourceSansPro;
+	text-align: center;
+}
+.home h1{
+	color: #ffce22;
+	font-size: 60pt;
+	margin-bottom: 0px;
+}
+.home p{
+	color: white;
+	font-size: 12pt;
+}
+.artikel {
+	font-family: SourceSansPro;
+	font-size: 30pt;
+	color: white;
+	background-image: url('asset/icon/vega.jpg');
+	background-size: contain;
+	padding: 100px;
+}
+.login {
+	padding-top: 100px;
+	margin-left:15%;
+	font-family: SourceSansPro;
+	color: #2f2f2f;
+}
+.login h1 {
+	margin-left: -10%;
+	font-size: 24pt;
+}
+.login form {
+	font-size: 10pt;
+}
+.login form label {
+	margin-top: 20px;
+	margin-left: 0px;
+}
+.login button {
+	margin-top: 20px;
+	margin-left: 0px;
+	font-size: 10pt;
+	background-color: #2f2f2f;
+	color: #ffce22;
+	border: none;
+	padding: 10px 20px;
+}
