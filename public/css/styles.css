@@ -1,10 +1,10 @@
 @font-face{
 	font-family: Gothic;
-	src : url(asset/fonts/GOTHIC.TTF);
+	src : url(../fonts/GOTHIC.TTF);
 }
 @font-face{
 	font-family: SourceSansPro;
-	src : url(asset/fonts/SourceSansPro-Regular.otf);
+	src : url(../fonts/SourceSansPro-Regular.otf);
 }
 .logo {
 	float: left;
@@ -60,7 +60,7 @@
 	font-family: SourceSansPro;
 	font-size: 30pt;
 	color: white;
-	background-image: url('asset/icon/vega.jpg');
+	background-image: url('../icon/vega.jpg');
 	background-size: contain;
 	padding: 100px;
 }
