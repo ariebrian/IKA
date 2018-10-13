@@ -41,7 +41,7 @@ Route::group([
     });
 });
 
-// Route::get('/mahasiswa', 'api\MahasiswaController@all');
+Route::get('/mahasiswa', 'api\MahasiswaController@all');
 Route::get('/test', 'api\MahasiswaController@index');
 Route::get('/profile/{id}', 'api\MahasiswaController@show');
 Route::get('/work/{id}', 'api\PekerjaanController@show');

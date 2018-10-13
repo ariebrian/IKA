@@ -66,13 +66,28 @@
         </style>
         <!-- Script -->
         <script>
-            $(document).ready(function() {
-                $.getJSON("http://localhost:8000/api/mahasiswa", {get_param : 'value'}, function(result){ //get JSON from url
+             $(document).ready(function() {
+                $.getJSON("http://localhost:8000/api/mahasiswa",  function(result){ //get JSON from url
                         $.each(result, function(index, element){  //loop, element = nama variabel for json result
-                            $('#api').append(element.no_identitas+" "+element.nama+" "); //oouput
-                            $('#api2').append(element.no_identitas+" "+element.mhs_alamat_rmh+" ");
-                        });
+                            // console.log(result);
+                            $('#api').append(element.no_identitas); //oouput
+                            $('#api').append("");
+                            // $('#api').append()
+                        }
+                        );
                     });
+                
+            });
+
+            $(document).ready(function() {
+                $.getJSON("http://localhost:8000/api/profile/1",  function(result){ //get JSON from url
+                        // $.each(result, function(index, element){  //loop, element = nama variabel for json result
+                            console.log(result);
+                            // $('#api2')
+                            $('#api2').append("Nama : "+result.nama); //oouput
+                            $('#api2').append("\tAlamat : "+result.mhs_alamat_rmh);
+                    });
+                
             });
         </script>
     </head>

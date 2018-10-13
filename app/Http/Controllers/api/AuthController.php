@@ -40,7 +40,7 @@ class AuthController extends Controller
             'role' => $request->role,
         ]);
 
-        $user->save();
+        $user->save();  
 
         return response()->json([
             'message' => 'Successfully registered'
