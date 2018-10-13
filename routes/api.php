@@ -33,6 +33,11 @@ Route::group([
         Route::get('/test3', 'api\PekerjaanController@index');
         Route::post('/add_work', 'api\PekerjaanController@store');
         Route::post('/add_mhs', 'api\MahasiswaController@store');
+        oute::get('/profile/{id}', 'api\MahasiswaController@show');
+        Route::get('/work/{id}', 'api\PekerjaanController@show');
+        Route::get('/dosen', 'api\DosenController@all');
+        Route::post('/add_dosen', 'api\DosenController@store');
+        Route::put('/update/{id}', 'api\MahasiswaController@update');
     });
 });
 
