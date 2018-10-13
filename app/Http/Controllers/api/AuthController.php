@@ -40,6 +40,8 @@ class AuthController extends Controller
             'role' => $request->role,
         ]);
 
+        // dd($user);
+
         $user->save();  
 
         return response()->json([
@@ -71,7 +73,7 @@ class AuthController extends Controller
         }
         else{
             $user = $temp_user;
-            // dd($user);
+            // dd($user);   
             $tokenResult = $user->createToken('Personal Access Token');
             $token = $tokenResult->token;
 
