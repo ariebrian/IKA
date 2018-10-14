@@ -18,6 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/mahasiswa', 'api\MahasiswaController@all');
+Route::get('/test', 'api\MahasiswaController@index');
 Route::get('/profile/{id}', 'api\MahasiswaController@show');
 Route::get('/work/{id}', 'api\PekerjaanController@show');
 Route::get('/dosen', 'api\DosenController@all');
