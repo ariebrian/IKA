@@ -90,3 +90,26 @@
 	border: none;
 	padding: 10px 20px;
 }
+
+/* ==================== Profile Page ==================== */
+
+/* --- Navbar ---*/
+#profile-picture{
+	padding: 13px;
+}
+
+#profile-picture img{
+	height: 50px;
+}
+
+/* --- Content ---*/
+
+#profile-content{
+	background: #ffce22;
+	padding-top: 50px;
+	height: 100%;
+}
+
+#profile-content p{
+	font-size: 14pt;
+}
