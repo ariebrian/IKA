@@ -44,10 +44,16 @@
 				</div>
 			</div>
 		</div>
-		<div class = "row  text-center" style="margin:0px;">
-			<div class = "col-md-4" style="padding:0px;"><div class="artikel">Artikel 1</div></div>
-			<div class = "col-md-4" style="padding:0px;"><div class="artikel">Artikel 2</div></div>
-			<div class = "col-md-4" style="padding:0px;"><div class="artikel">Artikel 3</div></div>
+		<div id="article-menu" class="row text-center" style="margin:0px;">
+			<div class="col-md-4 p-0 center-cropped" style="background-image: url('{{ asset('icon/vega.jpg')}}')">
+				<a href="#"><div class="article-item"> Artikel 1</div></a> 
+			</div>
+			<div class="col-md-4 p-0 center-cropped" style="background-image: url('{{ asset('icon/vega.jpg')}}')">
+				<a href="#"><div class="article-item"> Artikel 2</div></a> 
+			</div>
+			<div class="col-md-4 p-0 center-cropped" style="background-image: url('{{ asset('icon/vega.jpg')}}')">
+				<a href="#"><div class="article-item"> Artikel 3</div></a> 
+			</div>
 		</div>
 	</main>
 </body>
