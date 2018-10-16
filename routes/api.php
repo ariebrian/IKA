@@ -24,7 +24,7 @@ Route::group([
     Route::post('signup', 'api\AuthController@signup');
   
     Route::group([
-      'middleware' => 'auth:api'
+      'middleware' => ['auth:api','Header']
     ], function() {
         Route::get('logout', 'api\AuthController@logout');
         Route::get('user', 'api\AuthController@user');
