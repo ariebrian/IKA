@@ -15,8 +15,11 @@
     <!-- Styles -->
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     
-    <script>
+    <!-- <script>
         /* When the user clicks on the button, 
         toggle between hiding and showing the dropdown content */
         function myFunction() {
@@ -32,7 +35,7 @@
                 }
             }
         }
-    </script>
+    </script> -->
 </head>
 <body class="bodybg">
     <div id="app">
@@ -48,15 +51,15 @@
                         @guest
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="{{ Request::segment(1) === 'home' ? 'active' : null }}" href="{{ url('/') }}">{{ __('Beranda') }}</a>
-                                </li>
-                                <li class="nav-item">
                                     <a class="{{ Request::segment(1) === 'login' ? 'active' : null }}" href="{{ route('login') }}">{{ __('Masuk') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     @if (Route::has('register'))
                                         <a class="{{ Request::segment(1) === 'register' ? 'active' : null }}" href="{{ route('register') }}">{{ __('Daftar') }}</a>
                                     @endif
+                                </li>
+                                <li class="nav-item" style="background-color: green;">
+                                    <a href="{{ url('/') }}">{{ __('Kembali') }}</a>
                                 </li>
                         @else
                             <ul class="navbar-nav mr-auto">
