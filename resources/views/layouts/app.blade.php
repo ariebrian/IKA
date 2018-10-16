@@ -80,7 +80,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <div class="dropbtn">
-                                        <a onclick="myFunction()">
+                                        <a class="{{ Request::segment(1) === 'profile' ? 'active' : null }}" href="{{ route('profile') }}" onclick="myFunction()">
                                             <img src="{{ asset('icon/profile.png') }}" style="height:20px">
                                         </a>
                                         <div class="dropdown-menu" id="myDropdown">
