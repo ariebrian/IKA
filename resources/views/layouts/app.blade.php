@@ -14,48 +14,97 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-	<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+    
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bodybg">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark topnav">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand">
                     <img src="{{ asset('icon/IKAMOCKUP.png') }}" class="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
                         @guest
-                            <li class="nav-item">
-                                <a class="{{ Request::segment(1) === 'home' ? 'active' : null }}" href="{{ url('/') }}">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="{{ Request::segment(1) === 'login' ? 'active' : null }}" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                @if (Route::has('register'))
-                                    <a class="{{ Request::segment(1) === 'register' ? 'active' : null }}" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                @endif
-                            </li>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="{{ Request::segment(1) === 'home' ? 'active' : null }}" href="{{ url('/') }}">{{ __('Beranda') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="{{ Request::segment(1) === 'login' ? 'active' : null }}" href="{{ route('login') }}">{{ __('Masuk') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    @if (Route::has('register'))
+                                        <a class="{{ Request::segment(1) === 'register' ? 'active' : null }}" href="{{ route('register') }}">{{ __('Daftar') }}</a>
+                                    @endif
+                                </li>
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <h5 style="color: gray;">
+                                        {{ date('H') >= 6 && date('H') < 12 ? 'Selamat Pagi' : 
+                                            date('H') >= 12 && date('H') < 16 ? 'Selamat Siang' :
+                                            date('H') >= 16 && date('H') < 18 ? 'Selamat Sore' : 'Selamat Malam' }}, {{ Auth::user()->nama }}
+                                    </h5>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="{{ Request::segment(1) === 'home' ? 'active' : null }}" href="{{ route('home') }}">{{ __('Beranda') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="{{ Request::segment(1) === 'forum' ? 'active' : null }}" href="#forum">{{ __('Forum') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="{{ Request::segment(1) === 'forum' ? 'active' : null }}" href="#newsfeed">{{ __('Newsfeed') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="dropbtn">
+                                        <a onclick="myFunction()">
+                                            <img src="{{ asset('icon/profile.png') }}" style="height:20px">
+                                        </a>
+                                        <div class="dropdown-menu" id="myDropdown">
+                                            <a href="#">Link 1</a>
+                                            <a href="#">Link 2</a>
+                                            <a href="#">Link 3</a>
+                                        </div>
+                                    </div> 
+                                </li>
+                                <!-- <li class="nav-item">
+                                    <a class="button">
+                                        <img src="{{ asset('icon/profile.png') }}" style="height:20px">
                                     </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                                </li> -->
+                                <li class="nav-item">
+                                    <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                        {{ __('Keluar') }}
+                                    </a>
+                                </li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
                         @endguest
                     </ul>
                 </div>
@@ -65,6 +114,10 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+    </div>
+    <div class="footer">
+        <p>Copyright &copy Prodentic 2018 | Not for Public Use</p>
     </div>
 </body>
 </html>

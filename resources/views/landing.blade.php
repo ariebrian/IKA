@@ -27,9 +27,8 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item"><a class="active" href="#">Home</a></li>
-					<li class="nav-item"><a href="{{ route('login') }}">Login</a></li>
-					<li class="nav-item"><a href="{{ route('register') }}">Register</a></li>
+					<li class="nav-item"><a href="{{ route('login') }}">Masuk</a></li>
+					<li class="nav-item"><a href="{{ route('register') }}">Daftar</a></li>
 				</ul>
 			</div>
 		</div>
@@ -48,6 +47,9 @@
 			<div class = "col-md-4" style="padding:0px;"><div class="artikel">Artikel 1</div></div>
 			<div class = "col-md-4" style="padding:0px;"><div class="artikel">Artikel 2</div></div>
 			<div class = "col-md-4" style="padding:0px;"><div class="artikel">Artikel 3</div></div>
+		</div>
+		<div class="footer">
+			<p>Copyright &copy Prodentic 2018 | Not for Public Use</p>
 		</div>
 	</main>
 </body>

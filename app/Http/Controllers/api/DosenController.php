@@ -44,13 +44,14 @@ class DosenController extends Controller
 
         // dd($dosen);
 
-        $dosen->id_nip = $request->nip;
+        $dosen->no_identitas = $request->nip;
         $dosen->nama = $request->nama;
-        $dosen->bd = $request->tgl;
-        $dosen->alamat_h = $request->alamat;
+        $dosen->gender = $request->gender;
+        $dosen->dsn_tgl_lahir = $request->tgl;
+        $dosen->dsn_alamat_rmh = $request->alamat;
         $dosen->email = $request->email;
-        $dosen->no_wa = $request->wa;
-        $dosen->link_edin = $request->linked_in;
+        $dosen->dsn_no_wa = $request->wa;
+        $dosen->dsn_linkedin = $request->linked_in;
 
         $dosen->save();
 

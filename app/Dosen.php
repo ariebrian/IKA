@@ -10,9 +10,16 @@ class Dosen extends Model
     protected $table = 'profil_dsn';
 
     protected $fillable = [
-        'id_nip', 'nama', 'bd', 'alamat_h', 'email', 'no_wa', 'link_edin'
+        // 'no_identitas', 
+        // 'nama',
+        'gender',
+        'dsn_tgl_lahir', 
+        'dsn_alamat_rmh', 
+        // 'email', 
+        'dsn_no_wa', 
+        'dsn_linkedin'
     ];
 
     public $timestamps = false;
-    protected $primaryKey = 'id_nip';
+    protected $primaryKey = 'no_identitas';
 }

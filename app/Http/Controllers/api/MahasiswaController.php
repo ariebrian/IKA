@@ -123,6 +123,7 @@ class MahasiswaController extends Controller
         $mahasiswa = Mahasiswa::find($id);
         $mahasiswa->no_identitas = $request->npm;
         $mahasiswa->nama = $request->nama;
+        $mahasiswa->gender = $request->gender;
         $mahasiswa->mhs_tgl_lahir = $request->tgl;
         $mahasiswa->mhs_alamat_rmh = $request->alamat;
         $mahasiswa->mhs_angkatan = $request->angkatan;

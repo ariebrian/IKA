@@ -90,3 +90,25 @@
 	border: none;
 	padding: 10px 20px;
 }
+
+.show {
+    display: block;
+}
+
+.footer {
+	position: relative;
+	bottom: 0px;
+	height: 40px;
+	margin: 50px 50px 0 50px;
+	color: #777;
+	background-color: transparent;
+	border-top: solid 2px #FFD51E;
+	font-style: italic;
+	text-align: center;
+}
+
+.footer p {
+	text-align: center;
+	font-size: 12px;
+	line-height: 40px;
+}

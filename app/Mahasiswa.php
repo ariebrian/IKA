@@ -9,13 +9,24 @@ class Mahasiswa extends Model
     //
     protected $table = "profil_mhs";
 
-    // protected $fillable = 
-    // ['id_npm', 'nama', 'bd', 'alamat_h', 'angkatan', 'peminatan', 'thn_lulus', 'jdl_skripsi', 'email', 'no_wa', 'link_edin'];
+    protected $fillable = [
+        // 'no_identitas',
+        // 'nama',
+        'gender', 
+        'mhs_tgl_lahir', 
+        'mhs_alamat_rmh',
+        // 'mhs_angkatan', 
+        'mhs_peminatan', 
+        'mhs_thn_lulus', 
+        'mhs_skripsi',  
+        // 'email', 
+        'mhs_no_wa', 
+        'mhs_linkedin'
+    ];
 
-    // public $timestamps = false;
-    // protected $primaryKey = 'id_npm';
-
-
+    public $timestamps = false;
+    protected $primaryKey = 'no_identitas';
+    
     /**
      * Get all pekerjaan belongs to a user
      */
