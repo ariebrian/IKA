@@ -17,6 +17,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// Route::get('/signin', 'AuthController@login_view')->name('login-view');
+// Route::post('/signin', 'AuthController@login')->name('sign-in');
+
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/test', 'HomeController@user')->name('user');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
+
+Route::get('/my_profile/{id}', 'ProfileController@show_profile')->name('my-profile/{id}');
+Route::get('/mahasiswa', 'ProfileController@all')->name('mahasiswa');
+Route::post('/fill_profile', 'ProfileController@store')->name('fill_profile');
+
+Route::get('/lecturer_profile/{id}', 'ProfileController@dosen_profile')->name('my-profile/{id}');
+Route::get('/dosen', 'ProfileController@dosen')->name('dosen');
+

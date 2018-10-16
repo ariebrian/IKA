@@ -69,14 +69,14 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         // dd($data);
-        $user= User::create([
+        $user =  User::create([
             'no_identitas' => $data['no_identitas'],
             'nama' => $data['nama'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'role' => $data['role']
         ]);
-        
+    
         return response()->json($user, 201);
         // $user = new App\User;
 
