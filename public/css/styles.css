@@ -8,7 +8,7 @@
 }
 .logo {
 	float: left;
-	height: 75px;
+	height: 65px;
 }
 .topnav {
 	list-style-type: none;
@@ -41,9 +41,10 @@
 .bodybg{
 	background-color: #2f2f2f;
 }
+
 .home{
-	padding-top: 55px;
-	padding-bottom: 55px;
+	padding-top: 75px;
+	padding-bottom: 75px;
 	font-family: SourceSansPro;
 	text-align: center;
 }
@@ -56,14 +57,19 @@
 	color: white;
 	font-size: 12pt;
 }
-.artikel {
-	font-family: SourceSansPro;
+
+.article-item{
+	background-color: rgba(255, 206, 34, 0.7);
+	padding: 125px;
 	font-size: 30pt;
 	color: white;
-	background-image: url('../icon/vega.jpg');
-	background-size: contain;
-	padding: 100px;
 }
+
+.center-cropped {
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
 .login {
 	padding-top: 100px;
 	margin-left:15%;
@@ -111,4 +117,27 @@
 	text-align: center;
 	font-size: 12px;
 	line-height: 40px;
+}
+
+/* ==================== Profile Page ==================== */
+
+/* --- Navbar ---*/
+#profile-picture{
+	padding: 13px;
+}
+
+#profile-picture img{
+	height: 50px;
+}
+
+/* --- Content ---*/
+
+#profile-content{
+	background: #ffce22;
+	padding-top: 50px;
+	height: 100%;
+}
+
+#profile-content p{
+	font-size: 14pt;
 }

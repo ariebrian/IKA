@@ -17,7 +17,7 @@
 	<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 </head>
 <body class="bodybg">
-	<nav class="navbar navbar-expand-md navbar-dark topnav">
+	<nav class="navbar navbar-expand-md navbar-dark p-0 topnav ">
 		<div class="container">
 			<a class="navbar-brand" href="{{ url('/') }}">
 				<img src="{{ asset('icon/IKAMOCKUP.png') }}" class="logo">
@@ -43,10 +43,16 @@
 				</div>
 			</div>
 		</div>
-		<div class = "row  text-center" style="margin:0px;">
-			<div class = "col-md-4" style="padding:0px;"><div class="artikel">Artikel 1</div></div>
-			<div class = "col-md-4" style="padding:0px;"><div class="artikel">Artikel 2</div></div>
-			<div class = "col-md-4" style="padding:0px;"><div class="artikel">Artikel 3</div></div>
+		<div id="article-menu" class="row text-center" style="margin:0px;">
+			<div class="col-md-4 p-0 center-cropped" style="background-image: url('{{ asset('img/dummy1.jpg')}}')">
+				<a href="#"><div class="article-item"> Artikel 1</div></a> 
+			</div>
+			<div class="col-md-4 p-0 center-cropped" style="background-image: url('{{ asset('img/dummy2.jpg')}}')">
+				<a href="#"><div class="article-item"> Artikel 2</div></a> 
+			</div>
+			<div class="col-md-4 p-0 center-cropped" style="background-image: url('{{ asset('img/dummy3.jpg')}}')">
+				<a href="#"><div class="article-item"> Artikel 3</div></a> 
+			</div>
 		</div>
 		<div class="footer">
 			<p>Copyright &copy Prodentic 2018 | Not for Public Use</p>

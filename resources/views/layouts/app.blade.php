@@ -36,7 +36,7 @@
 </head>
 <body class="bodybg">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark topnav">
+        <nav class="navbar navbar-expand-md navbar-dark p-0 topnav">
             <div class="container">
                 <a class="navbar-brand">
                     <img src="{{ asset('icon/IKAMOCKUP.png') }}" class="logo">
