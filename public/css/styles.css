@@ -225,3 +225,43 @@
 .image-content img{
 	width: 95%;
 }
+
+
+/* ===================== Forum ====================  */
+.forum-list{
+	background-color: #FFD51E;
+	min-height: 600px;
+}
+
+.forum-list > div{
+	padding: 0 5%;
+}
+
+.header-container{
+	background-color: #3e3e3e;
+}
+
+.header-container div{
+	padding: 25px;
+	color: white;
+	font-weight: bold;
+}
+
+.forum-item{
+	padding: 20px 5%;
+	background-color: #d8b128;
+	margin-bottom: 2px;
+	color: white;
+}
+
+.forum-title{
+	padding-left: 0;
+}
+.date{
+	font-weight: bold;
+	margin-right: 20px;
+}
+
+.time{
+	font-weight: bold;
+}
