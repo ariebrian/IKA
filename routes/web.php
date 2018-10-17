@@ -32,4 +32,5 @@ Route::post('/fill_profile', 'ProfileController@store')->name('fill_profile');
 Route::get('/lecturer_profile/{id}', 'ProfileController@dosen_profile')->name('my-profile/{id}');
 Route::get('/dosen', 'ProfileController@dosen')->name('dosen');
 
-Route::get('/newsfeed', 'NewsfeedController@dosen')->name('newsfeed');
+Route::get('/newsfeed', 'NewsfeedController@index')->name('newsfeed');
+Route::get('/forum', 'ForumController@index')->name('forum');
