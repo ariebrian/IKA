@@ -34,4 +34,9 @@ class Mahasiswa extends Model
     {
         return $this->belongsToMany('App\Pekerjaan');
     }
+
+    public function user()
+    {
+        return $this->hasOne('App\User', 'no_identitas', 'no_identitas');
+    }
 }

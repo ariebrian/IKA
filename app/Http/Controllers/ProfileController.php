@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Exception;
 use App\Mahasiswa;
 use App\Dosen;
+use App\Pekerjaan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -44,14 +45,19 @@ class ProfileController extends Controller
 
     public function show_profile($id)
     {
-        $mahasiswa = Mahasiswa::find($id);
+        $mahasiswa = Mahasiswa::with('pekerjaan')->where('no_identitas',$id)->first();
+        // $npm = [$id];
+        // $mahasiswa = DB::select('select * from profil_mhs where no_identitas = ?', [$id]);
+        dd($mahasiswa);
         // $mhs = $mahasiswa->pekerjaan;
+        // dd($mhs);
         $result =[
             'mahasiswa' =>$mahasiswa,
             // 'pekerjaan' => $mhs,
         ];
 
-        dd($result);
+        // dd($result);
+        return view('layouts.profile', [$result => $data]);
     }
 
     public function store(Request $request)
