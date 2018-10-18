@@ -44,10 +44,10 @@ class PekerjaanController extends Controller
         $work = new Pekerjaan;
         $work->tempat_kerja = $request->nama_tempat;
         $work->alamat_kerja = $request->alamat_kerja;
-
+        dd($work);
         // $npm = Auth::user()->no_identitas;
-        $uid = Auth::user()->id;
-         $work->save();
+        // $uid = Mahasiswa::where('user_id',Auth::user()->id)->first()->id;
+        $work->save();
          
          $work->mahasiswa()->attach($uid);
     }
@@ -95,6 +95,6 @@ class PekerjaanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // 
     }
 }

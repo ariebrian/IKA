@@ -45,19 +45,19 @@ class ProfileController extends Controller
 
     public function show_profile($id)
     {
-        $mahasiswa = Mahasiswa::with('pekerjaan')->where('no_identitas',$id)->first();
+        $mahasiswa = Mahasiswa::with('pekerjaan')->where('user_id',$id)->first();
         // $npm = [$id];
         // $mahasiswa = DB::select('select * from profil_mhs where no_identitas = ?', [$id]);
-        dd($mahasiswa);
-        // $mhs = $mahasiswa->pekerjaan;
+        // dd($mahasiswa);
+        $mhs = $mahasiswa->pekerjaan->toArray();
         // dd($mhs);
         $result =[
             'mahasiswa' =>$mahasiswa,
-            // 'pekerjaan' => $mhs,
+            'pekerjaan' => $mhs,
         ];
 
         // dd($result);
-        return view('layouts.profile', [$result => $data]);
+        return view('layouts.profile', $result);
     }
 
     public function store(Request $request)

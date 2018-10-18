@@ -26,6 +26,7 @@ class CreateProfilMhs extends Migration
             $table->string('email'); // Foreign Key (Has One --- belong to User)
             $table->string('mhs_no_wa');
             $table->string('mhs_linkedin');
+            $table->string('user_id');
             $table->timestamps();
         });
     }

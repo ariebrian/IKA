@@ -34,6 +34,6 @@ class User extends Authenticatable
 
     public function mahasiswa()
     {
-        return $this->hasOne('App\Mahasiswa', 'no_identitas', 'no_identitas');
+        return $this->hasOne('App\Mahasiswa');
     }
 }
