@@ -76,10 +76,10 @@
                                     <a class="{{ Request::segment(1) === 'home' ? 'active' : null }}" href="{{ route('home') }}">{{ __('Beranda') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="{{ Request::segment(1) === 'forum' ? 'active' : null }}" href="#forum">{{ __('Forum') }}</a>
+                                    <a class="{{ Request::segment(1) === 'forum' ? 'active' : null }}" href="{{ route('forum') }}">{{ __('Forum') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="{{ Request::segment(1) === 'forum' ? 'active' : null }}" href="#newsfeed">{{ __('Newsfeed') }}</a>
+                                    <a class="{{ Request::segment(1) === 'newsfeed' ? 'active' : null }}" href="{{ route('newsfeed') }}">{{ __('Newsfeed') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <div class="dropbtn">
