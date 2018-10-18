@@ -31,4 +31,19 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token'
     ];
+
+    public function mahasiswa()
+    {
+        return $this->hasOne('App\Mahasiswa');
+    }
+
+    public function forum()
+    {
+        return $this->hasMany('App\Forum');
+    }
+
+    public function reply()
+    {
+        $this->hasMany('App\Reply');
+    }
 }
