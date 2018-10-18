@@ -1,3 +1,6 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://use.fontawesome.com/releases/v5.4.1/css/all.css');
+
 @font-face{
 	font-family: Gothic;
 	src : url(../fonts/GOTHIC.TTF);
@@ -140,4 +143,125 @@
 
 #profile-content p{
 	font-size: 14pt;
+}
+
+/* Newsfeed */
+.title{
+	color: #ffce22;
+}
+
+.title p{
+	color: white;
+}
+
+/* -> Search */
+.search-containter{
+	background-color: #3e3e3e;
+	text-align: center;
+	padding: 5px;
+}
+#custom-search-input {
+    margin:0;
+    margin-top: 10px;
+    padding: 0;
+}
+ 
+#custom-search-input .search-query {
+    width:100%;
+    padding-right: 3px;
+    padding-left: 15px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 0;
+}
+ 
+#custom-search-input button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: absolute;
+    right:0;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color:#D9230F;
+    cursor: unset;
+    z-index: 2;
+}
+ 
+.search-query:focus{
+    z-index: 0;   
+}
+
+/* Newsfeed  */
+#newsfeed-content{
+	background-color: #ffce22;
+}
+
+#newsfeed-list{
+	background-color: #d8b128;
+}
+
+.news-item{
+	padding:20px;
+	color:white;
+}
+
+.news-item h2{
+	font-size: 36pt;
+	margin-bottom: 0;
+}
+
+.image-content{
+	text-align: center;
+}
+
+.image-content img{
+	width: 95%;
+}
+
+
+/* ===================== Forum ====================  */
+.forum-list{
+	background-color: #FFD51E;
+	min-height: 600px;
+}
+
+.forum-list > div{
+	padding: 0 5%;
+}
+
+.header-container{
+	background-color: #3e3e3e;
+}
+
+.header-container div{
+	padding: 25px;
+	color: white;
+	font-weight: bold;
+}
+
+.forum-item{
+	padding: 20px 5%;
+	background-color: #d8b128;
+	margin-bottom: 2px;
+	color: white;
+}
+
+.forum-title{
+	padding-left: 0;
+}
+.date{
+	font-weight: bold;
+	margin-right: 20px;
+}
+
+.time{
+	font-weight: bold;
 }
