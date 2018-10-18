@@ -36,4 +36,14 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Mahasiswa');
     }
+
+    public function forum()
+    {
+        return $this->hasMany('App\Forum');
+    }
+
+    public function reply()
+    {
+        $this->hasMany('App\Reply');
+    }
 }
