@@ -18,9 +18,9 @@
     <!-- <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet"> -->
 
     
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
@@ -47,7 +47,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark p-0 topnav">
             <div class="container">
-                <a class="navbar-brand">
+                <a href="{{ route('home') }}" class="navbar-brand">
                     <img src="{{ asset('icon/IKAMOCKUP.png') }}" class="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
