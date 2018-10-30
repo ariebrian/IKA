@@ -14,7 +14,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
@@ -41,7 +46,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark p-0 topnav">
             <div class="container">
-                <a class="navbar-brand">
+                <a href="{{ route('home') }}" class="navbar-brand">
                     <img src="{{ asset('icon/IKAMOCKUP.png') }}" class="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -78,32 +83,22 @@
                                 <li class="nav-item">
                                     <a class="{{ Request::segment(1) === 'forum' ? 'active' : null }}" href="{{ route('forum') }}">{{ __('Forum') }}</a>
                                 </li>
+
                                 <li class="nav-item">
                                     <a class="{{ Request::segment(1) === 'newsfeed' ? 'active' : null }}" href="{{ route('newsfeed') }}">{{ __('Newsfeed') }}</a>
                                 </li>
-                                <li class="nav-item">
-                                    <div class="dropbtn">
-                                        <a class="{{ Request::segment(1) === 'profile' ? 'active' : null }}" href="{{ route('profile') }}" onclick="myFunction()">
-                                            <img src="{{ asset('icon/profile.png') }}" style="height:20px">
-                                        </a>
-                                        <div class="dropdown-menu" id="myDropdown">
-                                            <a href="#">Link 1</a>
-                                            <a href="#">Link 2</a>
-                                            <a href="#">Link 3</a>
-                                        </div>
-                                    </div> 
-                                </li>
-                                <!-- <li class="nav-item">
-                                    <a class="button">
+                                
+                                <!-- Dropdown -->
+                                
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                                         <img src="{{ asset('icon/profile.png') }}" style="height:20px">
                                     </a>
-                                </li> -->
-                                <li class="nav-item">
-                                    <a href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                                        {{ __('Keluar') }}
-                                    </a>
+                                    <div id="profile-submenu" class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="{{ route('profile')}}">Profile</a>
+                                        <a class="dropdown-item font-weight-bold" href="#" onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a>
+                                    </div>
                                 </li>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf

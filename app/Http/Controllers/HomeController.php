@@ -31,6 +31,7 @@ class HomeController extends Controller
     public function user()
     {
         $user = Auth::user();
-        dd($user);
+        // dd($user);
+        // return view('layouts.app',['user'=>$user]);
     }
 }
