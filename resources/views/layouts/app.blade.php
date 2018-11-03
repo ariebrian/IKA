@@ -15,7 +15,6 @@
     <!-- Styles -->
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <!-- <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet"> -->
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -116,7 +115,7 @@
 
     </div>
     <div class="footer">
-        <p>Copyright &copy Prodentic 2018 | Not for Public Use</p>
+        <p>Copyright &copy Prodentic 2018 | Only for Permitted Users</p>
     </div>
 </body>
 </html>
