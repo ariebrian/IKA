@@ -17,14 +17,14 @@ class CreateForumsTable extends Migration
             $table->increments('id');
             $table->text('title');
             $table->text('description');
-            $table->string('user_id');
+            $table->integer('user_id')->unsigned();
             $table->longText('first_post');
             $table->timestamps();
 
             $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('cascade');
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade');
         });
     }
 
