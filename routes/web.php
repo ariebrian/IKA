@@ -25,7 +25,7 @@ Route::get('/test', 'HomeController@user')->name('user');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
 
-Route::get('/my_profile/{id}', 'ProfileController@show_profile')->name('my-profile/{id}');
+Route::get('/my_profile/{id}', 'ProfileController@show_profile')->name('my_profile/{id}');
 Route::get('/mahasiswa', 'ProfileController@all')->name('mahasiswa');
 Route::post('/fill_profile', 'ProfileController@store')->name('fill_profile');
 

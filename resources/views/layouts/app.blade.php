@@ -96,7 +96,7 @@
                                         <img src="{{ asset('icon/profile.png') }}" style="height:20px">
                                     </a>
                                     <div id="profile-submenu" class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="{{ route('profile')}}">Profile</a>
+                                        <a class="dropdown-item" href="/my_profile/{{auth()->id()}}">Profile</a>
                                         <a class="dropdown-item font-weight-bold" href="#" onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a>
                                     </div>
