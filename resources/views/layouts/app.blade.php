@@ -115,7 +115,7 @@
 
     </div>
     <div class="footer">
-        <p>Copyright &copy Prodentic 2018 | Not for Public Use</p>
+        <p>Copyright &copy Prodentic 2018 | Only for Permitted Users</p>
     </div>
 </body>
 </html>

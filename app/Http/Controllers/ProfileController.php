@@ -29,7 +29,10 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('layouts.profile');
+        $mahasiswa = Mahasiswa::all();
+        $dosen = Dosen::all();
+
+        return view('layouts.profile', compact('mahasiswa', 'dosen'));
     }
 
     /**
@@ -67,6 +70,7 @@ class ProfileController extends Controller
         $mahasiswa = new Mahasiswa;
 
         $mahasiswa->no_identitas = $user->no_identitas;
+        $mahasiswa->nama = $user->nama;
         $mahasiswa->mhs_tgl_lahir = $request->tgl;
         $mahasiswa->mhs_alamat_rmh = $request->alamat;
         $mahasiswa->mhs_angkatan = $request->angkatan;
