@@ -27,8 +27,7 @@
                                 <label for="npm" class="col-md-4 col-form-label text-md-right">{{ __('Nomor ID') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="npm" type="text" class="form-control{{ $errors->has('no_identitas') ? ' is-invalid' : '' }}" name="no_identitas" value="{{ old('npm') }}" readonly>
-                                    {{ Auth::user()->no_identitas }}
+                                    <input id="npm" type="text" class="form-control{{ $errors->has('no_identitas') ? ' is-invalid' : '' }}" name="no_identitas" value="{{ Auth::user()->no_identitas }}" readonly>
                                 </div>
                             </div>
 
@@ -36,8 +35,7 @@
                                 <label for="nama" class="col-md-4 col-form-label text-md-right">{{ __('Nama') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="nama" type="text" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ old('nama') }}" readonly>
-                                    {{ Auth::user()->nama }}
+                                    <input id="nama" type="text" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ Auth::user()->nama }}" readonly>
                                 </div>
                             </div>
 
@@ -154,8 +152,7 @@
                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Alamat E-Mail') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" readonly>
-                                    {{ Auth::user()->email }}
+                                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ Auth::user()->email }}" readonly>
                                 </div>
                             </div>
 
@@ -213,8 +210,7 @@
                                 <label for="nip" class="col-md-4 col-form-label text-md-right">{{ __('Nomor ID') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="nip" type="text" class="form-control{{ $errors->has('no_identitas') ? ' is-invalid' : '' }}" name="no_identitas" value="{{ old('nip') }}" readonly>
-                                    {{ Auth::user()->no_identitas }}
+                                    <input id="nip" type="text" class="form-control{{ $errors->has('no_identitas') ? ' is-invalid' : '' }}" name="no_identitas" value="{{ Auth::user()->no_identitas }}" readonly>
                                 </div>
                             </div>
 
@@ -222,8 +218,7 @@
                                 <label for="nama" class="col-md-4 col-form-label text-md-right">{{ __('Nama') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="nama" type="text" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ old('nama') }}" readonly>
-                                    {{ Auth::user()->nama }}
+                                    <input id="nama" type="text" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ Auth::user()->nama }}" readonly>
                                 </div>
                             </div>
 
@@ -275,8 +270,7 @@
                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Alamat E-Mail') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" readonly>
-                                    {{ Auth::user()->email }}
+                                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ Auth::user()->email }}" readonly>
                                 </div>
                             </div>
 

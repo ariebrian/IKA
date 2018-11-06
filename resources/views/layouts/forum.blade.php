@@ -24,23 +24,23 @@
         <div id="forum-stats" class="col-md-3">Stats</div>
         <div id="forum-last-post" class="col-md-3">Last Post</div>
     </div>
-    <?php for($i=0; $i<3; $i++): ?>
-    <a href="#">
-        <div class="forum-item row">
-            <div class="forum-title col-md-6">
-                <h5>Judul Forum</h5>
-                <label>Penjelasan Forum</label>
+    @foreach ($forums as $forum)
+        <a href="#">
+            <div class="forum-item row">
+                <div class="forum-title col-md-6">
+                    <h5>{{ $forum->title }}</h5>
+                    <label>{{ $forum->description }}</label>
+                </div>
+                <div class="forum-stats col-md-3">
+                    <b>Replies:</b> 34<br>
+                    <b>Views:</b> 123
+                </div>
+                <div class="forum-last-post col-md-3">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                    <span class="date">9/12/2018</span> <span class="time">20:50</span>
+                </div>
             </div>
-            <div class="forum-stats col-md-3">
-                <b>Replies:</b> 34<br>
-                <b>Views:</b> 123
-            </div>
-            <div class="forum-last-post col-md-3">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry
-                <span class="date">9/12/2018</span> <span class="time">20:50</span>
-            </div>
-        </div>
-    </a>
-    <?php endfor ?>
+        </a>
+    @endforeach
 </div>
 @endsection
