@@ -123,7 +123,7 @@
                                 <div class="col-md-6">
                                     <select id="thn_lulus" class="form-control{{ $errors->has('mhs_thn_lulus') ? ' is-invalid' : '' }}" name="mhs_peminatan" value="{{ old('thn_lulus') }}" required>
                                         <option value="">Belum Lulus</option>
-                                        @for ($i = 2015; $i<=2019; $i++)
+                                        @for ($i = 2015; $i<=2022; $i++)
                                             <option value="{{$i}}">{{$i}}</option>
                                         @endfor
                                     </select>
