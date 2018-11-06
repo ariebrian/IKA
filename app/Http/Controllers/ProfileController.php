@@ -71,6 +71,11 @@ class ProfileController extends Controller
         return view('layouts.profile', $result);
     }
 
+    public function add()
+    {
+        return view('layouts.editprofile');
+    }
+
     public function store(Request $request)
     {
         $user = Auth::user();

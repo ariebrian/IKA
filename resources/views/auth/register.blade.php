@@ -91,8 +91,8 @@
 
                             <div class="col-md-6">
                                 <select id="role" class="form-control{{ $errors->has('role') ? ' is-invalid' : '' }}" name="role" value="{{ old('role') }}" required autofocus>
-                                    <option value="Mahasiswa">Mahasiswa/Alumni</option>
-                                    <option value="Dosen">Dosen</option>
+                                    <option value="mahasiswa">Mahasiswa/Alumni</option>
+                                    <option value="dosen">Dosen</option>
                                 </select>
 
                                 @if ($errors->has('role'))
