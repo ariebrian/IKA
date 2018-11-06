@@ -10,12 +10,12 @@ class Dosen extends Model
     protected $table = 'profil_dsn';
 
     protected $fillable = [
-        // 'no_identitas', 
-        // 'nama',
+        'no_identitas', 
+        'nama',
         'gender',
         'dsn_tgl_lahir', 
         'dsn_alamat_rmh', 
-        // 'email', 
+        'email', 
         'dsn_no_wa', 
         'dsn_linkedin'
     ];

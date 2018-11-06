@@ -20,8 +20,8 @@ class CreateProfilDsn extends Migration
             $table->date('dsn_tgl_lahir');
             $table->string('dsn_alamat_rmh');
             $table->string('email'); // Foreign Key (Has One --- belong to User)
-            $table->string('dsn_no_wa');
-            $table->string('dsn_linkedin');
+            $table->string('dsn_no_wa')->nullable();
+            $table->string('dsn_linkedin')->nullable();
             $table->timestamps();
         });
     }

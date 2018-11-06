@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Auth;
 class ProfileController extends Controller
 {
     /**
+     * Where to redirect users after update the profile.
+     *
+     * @var string
+     */
+    protected $redirectTo = '/profile';
+
+    /**
      * Create a new controller instance.
      *
      * @return void
@@ -27,6 +34,7 @@ class ProfileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
         $mahasiswa = Mahasiswa::all();

@@ -23,10 +23,10 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="npm" class="col-md-4 col-form-label text-md-right">{{ __('Nomor ID') }}</label>
+                            <label for="no_identitas" class="col-md-4 col-form-label text-md-right">{{ __('Nomor ID') }}</label>
 
                             <div class="col-md-6">
-                                <input id="no_identitas" type="text" class="form-control{{ $errors->has('no_identitas') ? ' is-invalid' : '' }}" name="no_identitas" value="{{ old('npm') }}" required autofocus>
+                                <input id="no_identitas" type="text" class="form-control{{ $errors->has('no_identitas') ? ' is-invalid' : '' }}" name="no_identitas" value="{{ old('no_identitas') }}" required autofocus>
 
                                 @if ($errors->has('no_identitas'))
                                     <span class="invalid-feedback" role="alert">
@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nama') }}</label>
+                            <label for="nama" class="col-md-4 col-form-label text-md-right">{{ __('Nama') }}</label>
 
                             <div class="col-md-6">
                                 <input id="nama" type="text" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ old('nama') }}" required autofocus>
@@ -91,8 +91,8 @@
 
                             <div class="col-md-6">
                                 <select id="role" class="form-control{{ $errors->has('role') ? ' is-invalid' : '' }}" name="role" value="{{ old('role') }}" required autofocus>
-                                    <option value="mahasiswa">Mahasiswa/Alumni</option>
-                                    <option value="dosen">Dosen</option>
+                                    <option value="Mahasiswa">Mahasiswa/Alumni</option>
+                                    <option value="Dosen">Dosen</option>
                                 </select>
 
                                 @if ($errors->has('role'))
