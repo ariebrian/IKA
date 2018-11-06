@@ -33,4 +33,4 @@ Route::get('/lecturer_profile/{id}', 'ProfileController@dosen_profile')->name('m
 Route::get('/dosen', 'ProfileController@dosen')->name('dosen');
 
 Route::get('/newsfeed', 'NewsfeedController@index')->name('newsfeed');
-Route::get('/forum', 'ForumController@index')->name('forum');
+Route::get('/forum', 'ForumController@index')->name('forum')->middleware('auth');
