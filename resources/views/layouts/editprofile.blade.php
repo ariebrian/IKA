@@ -13,7 +13,7 @@
               @endforeach
           </ul>
     </div> -->
-    @if (auth()->user()->role == 'Mahasiswa')
+    @if (Auth::user()->role == 'Mahasiswa')
         <div class="row justify-content-center">
             <div class="col-md-8" id="form-mhs">
                 <div class="card" style="background-color:#ffce22">
