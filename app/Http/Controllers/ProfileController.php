@@ -104,6 +104,10 @@ class ProfileController extends Controller
         // dd($mahasiswa);
         $mahasiswa->save();
 
+        return redirect()->action(
+            'ProfileController@show_profile', ['id' => $user->id]
+        );
+
     }
 
     /**
