@@ -110,6 +110,44 @@ class ProfileController extends Controller
 
     }
 
+    public function edit()
+    {
+        $user = Auth::user();
+        $data = [
+            'nid' => $user->no_identitas,
+            'nama' => $user->nama,
+            'email' => $user->email,
+            'role' => $user->role,
+        ];
+        return view('layouts.updateprofile', $data);
+    }
+
+    public function update(Request $request)
+    {
+        $user = Auth::user();
+
+        $mahasiswa = Mahasiswa::with('pekerjaan')->where('user_id',$user->id)->first();
+        // dd($mahasiswa);
+        $mahasiswa->no_identitas = $user->no_identitas;
+        $mahasiswa->nama = $user->nama;
+        $mahasiswa->mhs_tgl_lahir = $request->mhs_tgl_lahir;
+        $mahasiswa->mhs_alamat_rmh = $request->mhs_alamat_rmh;
+        $mahasiswa->mhs_angkatan = $request->mhs_angkatan;
+        $mahasiswa->mhs_peminatan = $request->mhs_peminatan;
+        $mahasiswa->mhs_thn_lulus = $request->mhs_thn_lulus;
+        $mahasiswa->mhs_skripsi = $request->mhs_skripsi;
+        $mahasiswa->email = $user->email;
+        $mahasiswa->mhs_no_wa = $request->mhs_no_wa;
+        $mahasiswa->mhs_linkedin = $request->mhs_linkedin;
+        $mahasiswa->user_id = $user->id;
+
+        $mahasiswa->save();
+
+        return redirect()->action(
+            'ProfileController@show_profile', ['id' => $mahasiswa->user_id]
+        );
+    }
+
     /**
      * 
      * Function for Dosen
