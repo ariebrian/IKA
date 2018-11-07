@@ -13,14 +13,14 @@
               @endforeach
           </ul>
     </div> -->
-    @if (Auth::user()->role == 'Mahasiswa')
+    @if (Auth::user()->role == 'mahasiswa')
         <div class="row justify-content-center">
             <div class="col-md-8" id="form-mhs">
                 <div class="card" style="background-color:#ffce22">
                     <div class="card-header">{{ __('Ganti Profil') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('profile') }}">
+                        <form method="POST" action="{{ route('fill_profile') }}">
                             @csrf
 
                             <div class="form-group row">
@@ -87,8 +87,8 @@
                                 <label for="angkatan" class="col-md-4 col-form-label text-md-right">{{ __('Angkatan') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="angkatan" type="text" class="form-control{{ $errors->has('mhs_angkatan') ? ' is-invalid' : '' }}" name="mhs_angkatan" readonly>
-                                    20{{substr(Auth::user()->id(),6,2)}}
+                                    <input id="angkatan" type="text" class="form-control{{ $errors->has('mhs_angkatan') ? ' is-invalid' : '' }}" name="mhs_angkatan" value="20{{substr(Auth::user()->no_identitas,6,2)}}" readonly>
+                                    20{{substr(Auth::user()->no_identitas,6,2)}}
                                     @if ($errors->has('mhs_angkatan'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('mhs_angkatan') }}</strong>
@@ -203,7 +203,7 @@
                     <div class="card-header">{{ __('Ganti Profil') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('profile') }}">
+                        <form method="POST" action="{{ route('fill_profile') }}">
                             @csrf
 
                             <div class="form-group row">

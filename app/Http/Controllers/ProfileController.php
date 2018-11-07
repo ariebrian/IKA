@@ -73,7 +73,14 @@ class ProfileController extends Controller
 
     public function add()
     {
-        return view('layouts.editprofile');
+        $user = Auth::user();
+        $data = [
+            'nid' => $user->no_identitas,
+            'nama' => $user->nama,
+            'email' => $user->email,
+            'role' => $user->role,
+        ];
+        return view('layouts.editprofile', $data);
     }
 
     public function store(Request $request)
