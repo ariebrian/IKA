@@ -101,7 +101,7 @@
                                 <label for="peminatan" class="col-md-4 col-form-label text-md-right">{{ __('Peminatan') }}</label>
 
                                 <div class="col-md-6">
-                                    <select id="peminatan" class="form-control{{ $errors->has('mhs_peminatan') ? ' is-invalid' : '' }}" name="mhs_peminatan" value="{{ old('peminatan') }}" required>
+                                    <select id="peminatan" class="form-control{{ $errors->has('mhs_peminatan') ? ' is-invalid' : '' }}" name="mhs_peminatan" value="{{ old('peminatan') }}" >
                                         <option value="SI">Sistem Informasi dan Rekayasa Perangkat Lunak (SIRPL)</option>
                                         <option value="AI">Sistem Cerdas dan Grafika Komputer (SCGK)</option>
                                         <option value="JK">Jaringan Komputer dan Komunikasi Data (JKKD)</option>
@@ -138,7 +138,7 @@
                                 <label for="skripsi" class="col-md-4 col-form-label text-md-right">{{ __('Judul Skripsi') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="skripsi" type="text" class="form-control{{ $errors->has('mhs_skripsi') ? ' is-invalid' : '' }}" name="mhs_skripsi" required>
+                                    <input id="skripsi" type="text" class="form-control{{ $errors->has('mhs_skripsi') ? ' is-invalid' : '' }}" name="mhs_skripsi" >
 
                                     @if ($errors->has('mhs_skripsi'))
                                         <span class="invalid-feedback" role="alert">
@@ -174,7 +174,7 @@
                                 <label for="linkedin" class="col-md-4 col-form-label text-md-right">{{ __('Linkedin') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="linkedin" type="url" class="form-control{{ $errors->has('mhs_linkedin') ? ' is-invalid' : '' }}" name="mhs_linkedin" required>
+                                    <input id="linkedin" type="url" class="form-control{{ $errors->has('mhs_linkedin') ? ' is-invalid' : '' }}" name="mhs_linkedin" >
 
                                     @if ($errors->has('mhs_linkedin'))
                                         <span class="invalid-feedback" role="alert">
