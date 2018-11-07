@@ -18,7 +18,7 @@
             <h4>Judul skripsi:</h4>
             <p>{{$mahasiswa->mhs_skripsi}}</p>
             <h4>Kontak:</h4>
-            <p>0815741416242</p>  
+            <p>{{$mahasiswa->mhs_no_wa}}</p>  
             @foreach ($pekerjaan as $work)
                 <h4>Tempat kerja:</h4>
                 <p>{{$work['tempat_kerja']}}</p>
