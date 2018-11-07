@@ -92,7 +92,7 @@ class ProfileController extends Controller
         $mahasiswa->no_identitas = $user->no_identitas;
         $mahasiswa->nama = $user->nama;
         $mahasiswa->mhs_tgl_lahir = $request->mhs_tgl_lahir;
-        $mahasiswa->mhs_alamat_rmh = $request->mhs_alamat_rumah;
+        $mahasiswa->mhs_alamat_rmh = $request->mhs_alamat_rmh;
         $mahasiswa->mhs_angkatan = $request->mhs_angkatan;
         $mahasiswa->mhs_peminatan = $request->mhs_peminatan;
         $mahasiswa->mhs_thn_lulus = $request->mhs_thn_lulus;
@@ -100,7 +100,8 @@ class ProfileController extends Controller
         $mahasiswa->email = $user->email;
         $mahasiswa->mhs_no_wa = $request->mhs_no_wa;
         $mahasiswa->mhs_linkedin = $request->mhs_linkedin;
-        dd($mahasiswa);
+        $mahasiswa->user_id = $user->id;
+        // dd($mahasiswa);
         $mahasiswa->save();
 
     }
