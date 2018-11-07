@@ -12,7 +12,7 @@
             <h4>Nama:</h4>
             <p>{{$mahasiswa->nama}}</p>
             <h4>Tanggal lahir:</h4>
-            <p>{{$mahasiswa->mhs_tgl_lahir}}</p>
+            <p>{{Carbon\Carbon::parse($mahasiswa->mhs_tgl_lahir)->format('d F Y')}}</p>
             <h4>Tahun Lulus:</h4>
             <p>{{$mahasiswa->mhs_thn_lulus}}</p>
             <h4>Judul skripsi:</h4>
