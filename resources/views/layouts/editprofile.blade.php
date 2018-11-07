@@ -119,9 +119,9 @@
                                 <label for="thn_lulus" class="col-md-4 col-form-label text-md-right">{{ __('Tahun Kelulusan') }}</label>
 
                                 <div class="col-md-6">
-                                    <select id="thn_lulus" class="form-control{{ $errors->has('mhs_thn_lulus') ? ' is-invalid' : '' }}" name="mhs_peminatan" value="{{ old('thn_lulus') }}" required>
+                                    <select id="thn_lulus" class="form-control{{ $errors->has('mhs_thn_lulus') ? ' is-invalid' : '' }}" name="mhs_thn_lulus" value="{{ old('thn_lulus') }}" required>
                                         <option value="">Belum Lulus</option>
-                                        @for ($i = 2015; $i<=2022; $i++)
+                                        @for ($i = 2015; $i<=2018; $i++)
                                             <option value="{{$i}}">{{$i}}</option>
                                         @endfor
                                     </select>
