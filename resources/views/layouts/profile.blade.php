@@ -9,6 +9,12 @@
             <img style="width:100%;" src="{{ asset('icon/default-profile-picture.png') }}" alt="">
         </div>
         <div id="profile-content" class="col-md-9 bg-red">
+        <a href="/edit">
+        <button class="btn btn-primary">Edit Profile</button>
+        </a>
+            
+            <br>
+            <br>
             <h4>Nama:</h4>
             <p>{{$mahasiswa->nama}}</p>
             <h4>Tanggal lahir:</h4>
