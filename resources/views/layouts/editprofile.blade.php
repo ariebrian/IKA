@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('pageTitle', 'Ganti Profil')
+@section('pageTitle', 'Perbarui Profil')
 
 @section('content')
 <div class="container">
@@ -17,7 +17,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8" id="form-mhs">
                 <div class="card" style="background-color:#ffce22">
-                    <div class="card-header">{{ __('Ganti Profil') }}</div>
+                    <div class="card-header">{{ __('Perbarui Profil') }}</div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('fill_profile') }}">
@@ -200,7 +200,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8" id="form-dsn">
                 <div class="card" style="background-color:#ffce22">
-                    <div class="card-header">{{ __('Ganti Profil') }}</div>
+                    <div class="card-header">{{ __('Perbarui Profil') }}</div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('fill_profile') }}">

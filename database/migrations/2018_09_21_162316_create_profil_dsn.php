@@ -17,11 +17,12 @@ class CreateProfilDsn extends Migration
             $table->increments('id'); // Foreign Key (Has One --- belong to User)
             $table->string('no_identitas'); // Foreign Key (Has One --- belong to User)
             $table->string('nama'); // Foreign Key (Has One --- belong to User)
-            $table->date('dsn_tgl_lahir');
-            $table->string('dsn_alamat_rmh');
+            $table->date('tgl_lahir');
+            $table->string('gender');
+            $table->string('alamat_rmh');
             $table->string('email'); // Foreign Key (Has One --- belong to User)
-            $table->string('dsn_no_wa')->nullable();
-            $table->string('dsn_linkedin')->nullable();
+            $table->string('no_wa')->nullable();
+            $table->string('linkedin')->nullable();
             $table->timestamps();
         });
     }

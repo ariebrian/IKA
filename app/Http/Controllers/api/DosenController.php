@@ -47,11 +47,11 @@ class DosenController extends Controller
         $dosen->no_identitas = $request->nip;
         $dosen->nama = $request->nama;
         $dosen->gender = $request->gender;
-        $dosen->dsn_tgl_lahir = $request->tgl;
-        $dosen->dsn_alamat_rmh = $request->alamat;
+        $dosen->tgl_lahir = $request->tgl;
+        $dosen->alamat_rmh = $request->alamat;
         $dosen->email = $request->email;
-        $dosen->dsn_no_wa = $request->wa;
-        $dosen->dsn_linkedin = $request->linked_in;
+        $dosen->no_wa = $request->wa;
+        $dosen->linkedin = $request->linked_in;
 
         $dosen->save();
 

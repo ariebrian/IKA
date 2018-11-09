@@ -63,7 +63,7 @@
                                         <a class="{{ Request::segment(1) === 'register' ? 'active' : null }}" href="{{ route('register') }}">{{ __('Daftar') }}</a>
                                     @endif
                                 </li>
-                                <li class="nav-item" style="background-color: green;">
+                                <li class="nav-item">
                                     <a href="{{ url('/') }}">{{ __('Kembali') }}</a>
                                 </li>
                         @else
