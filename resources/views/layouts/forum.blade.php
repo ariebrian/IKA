@@ -36,7 +36,7 @@
                     <b>Views:</b> 123
                 </div>
                 <div class="forum-last-post col-md-3">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                    <p>{{$forum->first_post}}</p>
                     <span class="date">9/12/2018</span> <span class="time">20:50</span>
                 </div>
             </div>
