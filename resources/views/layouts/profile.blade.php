@@ -12,7 +12,6 @@
         <a href="/edit">
         <button class="btn btn-primary">Edit Profile</button>
         </a>
-            
             <br>
             <br>
             <h4>Nama:</h4>
