@@ -63,7 +63,7 @@ class ProfileController extends Controller
         $mhs = $mahasiswa->pekerjaan->toArray();
         // dd($mhs);
         $result =[
-            'mahasiswa' =>$mahasiswa,
+            'mahasiswa' => $mahasiswa,
             'pekerjaan' => $mhs,
         ];
 
@@ -91,15 +91,16 @@ class ProfileController extends Controller
 
         $mahasiswa->no_identitas = $user->no_identitas;
         $mahasiswa->nama = $user->nama;
-        $mahasiswa->mhs_tgl_lahir = $request->mhs_tgl_lahir;
-        $mahasiswa->mhs_alamat_rmh = $request->mhs_alamat_rmh;
-        $mahasiswa->mhs_angkatan = $request->mhs_angkatan;
-        $mahasiswa->mhs_peminatan = $request->mhs_peminatan;
-        $mahasiswa->mhs_thn_lulus = $request->mhs_thn_lulus;
-        $mahasiswa->mhs_skripsi = $request->mhs_skripsi;
+        $mahasiswa->tgl_lahir = $request->mhs_tgl_lahir;
+        $mahasiswa->gender = $request->jenis_kelamin;
+        $mahasiswa->alamat_rmh = $request->mhs_alamat_rmh;
+        $mahasiswa->angkatan = $request->mhs_angkatan;
+        $mahasiswa->peminatan = $request->mhs_peminatan;
+        $mahasiswa->thn_lulus = $request->mhs_thn_lulus;
+        $mahasiswa->skripsi = $request->mhs_skripsi;
         $mahasiswa->email = $user->email;
-        $mahasiswa->mhs_no_wa = $request->mhs_no_wa;
-        $mahasiswa->mhs_linkedin = $request->mhs_linkedin;
+        $mahasiswa->no_wa = $request->mhs_no_wa;
+        $mahasiswa->linkedin = $request->mhs_linkedin;
         $mahasiswa->user_id = $user->id;
         // dd($mahasiswa);
         $mahasiswa->save();
@@ -130,15 +131,16 @@ class ProfileController extends Controller
         // dd($mahasiswa);
         $mahasiswa->no_identitas = $user->no_identitas;
         $mahasiswa->nama = $user->nama;
-        $mahasiswa->mhs_tgl_lahir = $request->mhs_tgl_lahir;
-        $mahasiswa->mhs_alamat_rmh = $request->mhs_alamat_rmh;
-        $mahasiswa->mhs_angkatan = $request->mhs_angkatan;
-        $mahasiswa->mhs_peminatan = $request->mhs_peminatan;
-        $mahasiswa->mhs_thn_lulus = $request->mhs_thn_lulus;
-        $mahasiswa->mhs_skripsi = $request->mhs_skripsi;
+        $mahasiswa->tgl_lahir = $request->mhs_tgl_lahir;
+        $mahasiswa->gender = $request->jenis_kelamin;
+        $mahasiswa->alamat_rmh = $request->mhs_alamat_rmh;
+        $mahasiswa->angkatan = $request->mhs_angkatan;
+        $mahasiswa->peminatan = $request->mhs_peminatan;
+        $mahasiswa->thn_lulus = $request->mhs_thn_lulus;
+        $mahasiswa->skripsi = $request->mhs_skripsi;
         $mahasiswa->email = $user->email;
-        $mahasiswa->mhs_no_wa = $request->mhs_no_wa;
-        $mahasiswa->mhs_linkedin = $request->mhs_linkedin;
+        $mahasiswa->no_wa = $request->mhs_no_wa;
+        $mahasiswa->linkedin = $request->mhs_linkedin;
         $mahasiswa->user_id = $user->id;
 
         $mahasiswa->save();
@@ -170,5 +172,4 @@ class ProfileController extends Controller
 
         dd($result);
     }
-
 }
