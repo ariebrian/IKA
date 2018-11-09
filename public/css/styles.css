@@ -283,3 +283,53 @@
 .time{
 	font-weight: bold;
 }
+
+/* ===================== Dashboard ====================  */
+.profile-tab{
+	margin-top: 40px;
+}
+
+.profile-tab a{
+	padding: 10px 100px;
+	font-weight: bold;
+	background-color: #FFD51E;
+	color: #242424;
+	border-radius: 5px;
+}
+
+.profile-tab a:hover{
+	text-decoration: none;
+}
+
+.profile-list{
+	background-color: #FFD51E;
+	padding: 25px 0;
+	min-height: 600px;
+}
+
+.profile-item{
+	color: #212529;
+	transition:.3s;
+}
+
+.profile-item:hover{
+	background-color: #2f2f2f;
+	color: white;
+	border-radius: 20px;
+}
+
+.profile-item:active{
+	transform: scale(0.95);
+}
+
+.profile-image{
+	padding: 15px 30px 5px 30px;
+}
+
+.profile-image > img{
+	max-width: 100%;
+}
+
+.profile-name{
+	margin-bottom: 0;
+}
