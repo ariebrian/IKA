@@ -34,7 +34,7 @@
                             <label for="alamat" class="col-md-4 col-form-label text-md-right">{{ __('Alamat Perusahaan') }}</label>
 
                             <div class="col-md-6">
-                                <input id="alamat" type="text" class="form-control{{ $errors->has('alamat_kerja') ? ' is-invalid' : '' }}" name="alamat_kerja">
+                                <textarea id="alamat" type="text" class="form-control{{ $errors->has('alamat_kerja') ? ' is-invalid' : '' }}" name="alamat_kerja" rows="4"></textarea>
                             </div>
                         </div>
 
