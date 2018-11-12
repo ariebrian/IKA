@@ -32,9 +32,11 @@ Route::get('/test', 'HomeController@user')->name('user');
 Route::get('/my_profile/{id}', 'ProfileController@show_profile')->name('mhs-profile/{id}');
 Route::get('/mahasiswa', 'ProfileController@all')->name('mahasiswa');
 Route::get('/add', 'ProfileController@add')->name('add-profile');
-Route::get('/edit', 'ProfileController@edit')->name('edit-profile');
+Route::get('/edit/{id}', 'ProfileController@edit')->name('edit-profile/{id}');
 Route::post('/fill_profile', 'ProfileController@store')->name('fill_profile');
 Route::post('/update_profile', 'ProfileController@update')->name('update_profile');
+Route::get('/edit_kerja', 'PekerjaanController@edit')->name('edit-work');
+Route::post('/update_kerja', 'PekerjaanController@store')->name('update_work');
 
 Route::get('/lecturer_profile/{id}', 'ProfileController@dosen_profile')->name('my-profile/{id}');
 Route::get('/dosen', 'ProfileController@dosen')->name('dosen');

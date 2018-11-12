@@ -75,7 +75,7 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
         $data = [
-            'nid' => $user->no_identitas,
+            'no_identitas' => $user->no_identitas,
             'nama' => $user->nama,
             'email' => $user->email,
             'role' => $user->role,
@@ -111,16 +111,29 @@ class ProfileController extends Controller
 
     }
 
-    public function edit()
+    // public function edit()
+    // {
+    //     $user = Auth::user();
+    //     $mahasiswa = Mahasiswa::with('pekerjaan')->where('user_id',$user->id)->first();
+
+    //     $data = [
+    //         'no_identitas' => $user->no_identitas,
+    //         'nama' => $user->nama,
+    //         'email' => $user->email,
+    //         'role' => $user->role,
+    //     ];
+    //     return view('layouts.updateprofile', $data);
+    // }
+
+    public function edit($id)
     {
-        $user = Auth::user();
-        $data = [
-            'nid' => $user->no_identitas,
-            'nama' => $user->nama,
-            'email' => $user->email,
-            'role' => $user->role,
+        $mahasiswa = Mahasiswa::with('pekerjaan')->where('user_id',$id)->first();
+        
+        $result =[
+            'mahasiswa' => $mahasiswa,
         ];
-        return view('layouts.updateprofile', $data);
+
+        return view('layouts.updateprofile', $result);
     }
 
     public function update(Request $request)
