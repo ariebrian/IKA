@@ -74,12 +74,13 @@
                                 <label for="alamat" class="col-md-4 col-form-label text-md-right">{{ __('Alamat Tinggal') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="alamat" type="text" class="form-control{{ $errors->has('mhs_alamat_rmh') ? ' is-invalid' : '' }}" name="mhs_alamat_rmh" required>
+                                    <textarea rows="4" id="alamat" type="text" class="form-control{{ $errors->has('mhs_alamat_rmh') ? ' is-invalid' : '' }}" name="mhs_alamat_rmh" required>
                                     @if ($errors->has('mhs_alamat_rmh'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('mhs_alamat_rmh') }}</strong>
                                         </span>
                                     @endif
+                                    </textarea>
                                 </div>
                             </div>
 
