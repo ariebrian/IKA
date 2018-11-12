@@ -44,3 +44,8 @@ Route::get('/dosen', 'ProfileController@dosen')->name('dosen');
 Route::get('/newsfeed', 'NewsfeedController@index')->name('newsfeed');
 Route::get('/forum', 'ForumController@index')->name('forum')->middleware('auth');
 Route::get('/forum/{id}', 'ForumController@show')->name('forumid')->middleware('auth');
+
+// Just for test, delete if you will fix it
+Route::get('/news', 'NewsController@index')->name('news');
+Route::get('/subforum', 'SubForumController@index')->name('subforum');
+
