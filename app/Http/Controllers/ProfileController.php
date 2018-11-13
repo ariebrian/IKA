@@ -40,7 +40,14 @@ class ProfileController extends Controller
         $mahasiswa = Mahasiswa::all();
         $dosen = Dosen::all();
 
-        return view('layouts.home', compact('mahasiswa', 'dosen'));
+        $data = [
+            'mahasiswa' => $mahasiswa,
+            'dosen' => $dosen
+        ];
+
+        // return view('layouts.home', compact('mahasiswa', 'dosen'));
+        return view('layouts.home', $data);
+
     }
 
     /**

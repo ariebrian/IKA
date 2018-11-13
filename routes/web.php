@@ -28,6 +28,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/test', 'HomeController@user')->name('user');
 
 // Route::get('/profile', 'ProfileController@index')->name('profile');
+Route::get('/dashboard', 'ProfileController@index')->name('home');
 
 Route::get('/my_profile/{id}', 'ProfileController@show_profile')->name('mhs-profile/{id}');
 Route::get('/mahasiswa', 'ProfileController@all')->name('mahasiswa');
