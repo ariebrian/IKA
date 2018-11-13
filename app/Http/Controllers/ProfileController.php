@@ -67,7 +67,11 @@ class ProfileController extends Controller
         // $npm = [$id];
         // $mahasiswa = DB::select('select * from profil_mhs where no_identitas = ?', [$id]);
         // dd($mahasiswa);
-        $mhs = $mahasiswa->pekerjaan->toArray();
+        if($mahasiswa == NULL){
+            return redirect('/add');
+        }
+        else{
+            $mhs = $mahasiswa->pekerjaan->toArray();
         // dd($mhs);
         $result =[
             'mahasiswa' => $mahasiswa,
@@ -76,6 +80,25 @@ class ProfileController extends Controller
 
         // dd($result);
         return view('layouts.profile', $result);
+        }
+        
+    }
+
+    public function other_profile($id)
+    {
+        $mahasiswa = Mahasiswa::with('pekerjaan')->where('user_id',$id)->first();
+        // $npm = [$id];
+        // $mahasiswa = DB::select('select * from profil_mhs where no_identitas = ?', [$id]);
+        // dd($mahasiswa);
+        $mhs = $mahasiswa->pekerjaan->toArray();
+        // dd($mhs);
+        $result =[
+            'mahasiswa' => $mahasiswa,
+            'pekerjaan' => $mhs,
+        ];
+
+        // dd($result);
+        return view('layouts.otherprofile', $result);
     }
 
     public function add()

@@ -24,13 +24,14 @@ Auth::routes();
 // Route::get('/signin', 'AuthController@login_view')->name('login-view');
 // Route::post('/signin', 'AuthController@login')->name('sign-in');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'ProfileController@index')->name('home');
 Route::get('/test', 'HomeController@user')->name('user');
 
 // Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::get('/dashboard', 'ProfileController@index')->name('home');
 
 Route::get('/my_profile/{id}', 'ProfileController@show_profile')->name('mhs-profile/{id}');
+Route::get('/profile/{id}', 'ProfileController@other_profile')->name('profile/{id}');
 Route::get('/mahasiswa', 'ProfileController@all')->name('mahasiswa');
 Route::get('/add', 'ProfileController@add')->name('add-profile');
 Route::get('/edit/{id}', 'ProfileController@edit')->name('edit-profile/{id}');

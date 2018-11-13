@@ -30,19 +30,19 @@
 <div class="profile-list">
     <div class="container">
         <div class="row text-center">
-            <?php for ($i=0; $i < 16; $i++):?>
+            @foreach($mahasiswa as $mhs)
             <div class="col-md-3 p-2">
-                <a href="">
+                <a href="/profile/{{$mhs->user_id}}">
                     <div class="profile-item">                    
                         <div class="profile-image">
                             <img src="{{ asset('icon/profile.png') }}" alt="">
                         </div>
-                        <label for="name" class="profile-name">Firmansyah Yanuar</label><br>
-                        <label for="id_number">140810170051</label>
+                        <label for="name" class="profile-name">{{$mhs->nama}}</label><br>
+                        <label for="id_number">{{$mhs->no_identitas}}</label>
                     </div>
                 </a>
             </div>
-            <?php endfor ?>
+            @endforeach
         </div>
     </div>
 </div>
