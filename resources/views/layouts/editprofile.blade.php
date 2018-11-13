@@ -159,7 +159,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="no_wa" class="col-md-4 col-form-label text-md-right">{{ __('Nomor Whatsapp') }}</label>
+                                <label for="no_wa" class="col-md-4 col-form-label text-md-right">{{ __('Nomor Telepon') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="no_wa" type="text" class="form-control{{ $errors->has('mhs_no_wa') ? ' is-invalid' : '' }}" name="mhs_no_wa">
@@ -173,7 +173,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="linkedin" class="col-md-4 col-form-label text-md-right">{{ __('Linkedin') }}</label>
+                                <label for="linkedin" class="col-md-4 col-form-label text-md-right">{{ __('LinkedIn') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="linkedin" type="url" class="form-control{{ $errors->has('mhs_linkedin') ? ' is-invalid' : '' }}" name="mhs_linkedin">
@@ -277,7 +277,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="no_wa" class="col-md-4 col-form-label text-md-right">{{ __('Nomor Whatsapp') }}</label>
+                                <label for="no_wa" class="col-md-4 col-form-label text-md-right">{{ __('Nomor Telepon') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="no_wa" type="text" class="form-control{{ $errors->has('dsn_no_wa') ? ' is-invalid' : '' }}" name="dsn_no_wa" required>
@@ -291,7 +291,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="linkedin" class="col-md-4 col-form-label text-md-right">{{ __('Linkedin') }}</label>
+                                <label for="linkedin" class="col-md-4 col-form-label text-md-right">{{ __('LinkedIn') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="linkedin" type="url" class="form-control{{ $errors->has('dsn_linkedin') ? ' is-invalid' : '' }}" name="mhs_linkedin" required>
