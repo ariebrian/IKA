@@ -14,6 +14,7 @@
                     <a href="/edit/{{auth()->id()}}" class="btn btn-primary">Perbarui Profil</a>
                 </center>
             </div>
+            <br>
             <div class="row">
                 <center>
                     <a href="{{ route('edit-work') }}" class="btn btn-secondary">Perbarui Pekerjaan</a>
@@ -39,8 +40,10 @@
             <p>Sistem Informasi dan Rekayasa Perangkat Lunak</p>
             @elseif ($mahasiswa->peminatan == 'AI')
             <p>Sistem Cerdas dan Sistem Grafika</p>
-            @else
+            @elseif ($mahasiswa->peminatan == 'JK')
             <p>Jaringan Komputer dan Komunikasi Data</p>
+            @else
+            <p>Belum Memilih Peminatan</p>
             @endif      
             <h4>Tahun Lulus:</h4>
             @if($mahasiswa->thn_lulus == null)
