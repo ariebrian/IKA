@@ -19,7 +19,7 @@
                 <div class="card-header">{{ __('Perbarui Pekerjaan') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('update_profile') }}">
+                    <form method="POST" action="{{ route('update_work') }}">
                         @csrf
 
                         <div class="form-group row">

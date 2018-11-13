@@ -55,12 +55,17 @@ class PekerjaanController extends Controller
         $work = new Pekerjaan;
         $work->tempat_kerja = $request->nama_tempat;
         $work->alamat_kerja = $request->alamat_kerja;
-        dd($work);
+        // dd($work);
         // $npm = Auth::user()->no_identitas;
-        // $uid = Mahasiswa::where('user_id',Auth::user()->id)->first()->id;
+        $uid = Mahasiswa::where('user_id',Auth::user()->id)->first()->id;
+        // dd($uid);
         $work->save();
          
          $work->mahasiswa()->attach($uid);
+
+         return redirect()->action(
+            'ProfileController@show_profile', ['id' => $uid]
+        );
     }
 
     /**
