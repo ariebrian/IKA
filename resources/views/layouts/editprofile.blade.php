@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('pageTitle', 'Perbarui Profil')
+@section('pageTitle', 'Isi Profil')
 
 @section('content')
 <div class="container">
@@ -17,7 +17,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8" id="form-mhs">
                 <div class="card" style="background-color:#ffce22">
-                    <div class="card-header">{{ __('Perbarui Profil') }}</div>
+                    <div class="card-header">{{ __('Isi Profil') }}</div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('fill_profile') }}">
@@ -43,14 +43,14 @@
                                 <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Jenis Kelamin') }}</label>
 
                                 <div class="col-md-6">
-                                    <select id="gender" class="form-control{{ $errors->has('gender') ? ' is-invalid' : '' }}" name="jenis_kelamin" value="{{ old('gender') }}" required autofocus>
+                                    <select id="gender" class="form-control{{ $errors->has('jenis_kelamin') ? ' is-invalid' : '' }}" name="jenis_kelamin" required autofocus>
                                         <option value="Pria">Pria</option>
                                         <option value="Wanita">Wanita</option>
                                     </select>
 
-                                @if ($errors->has('gender'))
+                                @if ($errors->has('jenis_kelamin'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('gender') }}</strong>
+                                        <strong>{{ $errors->first('jenis_kelamin') }}</strong>
                                     </span>
                                 @endif
                                 </div>
@@ -74,12 +74,13 @@
                                 <label for="alamat" class="col-md-4 col-form-label text-md-right">{{ __('Alamat Tinggal') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="alamat" type="text" class="form-control{{ $errors->has('mhs_alamat_rmh') ? ' is-invalid' : '' }}" name="mhs_alamat_rmh" required>
+                                    <textarea rows="4" id="alamat" type="text" class="form-control{{ $errors->has('mhs_alamat_rmh') ? ' is-invalid' : '' }}" name="mhs_alamat_rmh" required>
                                     @if ($errors->has('mhs_alamat_rmh'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('mhs_alamat_rmh') }}</strong>
                                         </span>
                                     @endif
+                                    </textarea>
                                 </div>
                             </div>
 
@@ -101,9 +102,10 @@
                                 <label for="peminatan" class="col-md-4 col-form-label text-md-right">{{ __('Peminatan') }}</label>
 
                                 <div class="col-md-6">
-                                    <select id="peminatan" class="form-control{{ $errors->has('mhs_peminatan') ? ' is-invalid' : '' }}" name="mhs_peminatan" value="{{ old('peminatan') }}">
+                                    <select id="peminatan" class="form-control{{ $errors->has('mhs_peminatan') ? ' is-invalid' : '' }}" name="mhs_peminatan">
+                                        <option value="Belum">Belum Memiliki Bidang Minat</option>
                                         <option value="SI">Sistem Informasi dan Rekayasa Perangkat Lunak (SIRPL)</option>
-                                        <option value="AI">Sistem Cerdas dan Grafika Komputer (SCGK)</option>
+                                        <option value="AI">Sistem Cerdas dan Sistem Grafika (SCSG)</option>
                                         <option value="JK">Jaringan Komputer dan Komunikasi Data (JKKD)</option>
                                     </select>
 
@@ -121,7 +123,7 @@
                                 <div class="col-md-6">
                                     <select id="thn_lulus" class="form-control{{ $errors->has('mhs_thn_lulus') ? ' is-invalid' : '' }}" name="mhs_thn_lulus" value="{{ old('thn_lulus') }}">
                                         <option value="">Belum Lulus</option>
-                                        @for ($i = 2015; $i<=2018; $i++)
+                                        @for ($i = 2015; $i<=2020; $i++)
                                             <option value="{{$i}}">{{$i}}</option>
                                         @endfor
                                     </select>
@@ -160,7 +162,7 @@
                                 <label for="no_wa" class="col-md-4 col-form-label text-md-right">{{ __('Nomor Whatsapp') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="no_wa" type="text" class="form-control{{ $errors->has('mhs_no_wa') ? ' is-invalid' : '' }}" name="mhs_no_wa" required>
+                                    <input id="no_wa" type="text" class="form-control{{ $errors->has('mhs_no_wa') ? ' is-invalid' : '' }}" name="mhs_no_wa">
 
                                     @if ($errors->has('mhs_no_wa'))
                                         <span class="invalid-feedback" role="alert">
@@ -174,7 +176,7 @@
                                 <label for="linkedin" class="col-md-4 col-form-label text-md-right">{{ __('Linkedin') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="linkedin" type="url" class="form-control{{ $errors->has('mhs_linkedin') ? ' is-invalid' : '' }}" name="mhs_linkedin" >
+                                    <input id="linkedin" type="url" class="form-control{{ $errors->has('mhs_linkedin') ? ' is-invalid' : '' }}" name="mhs_linkedin">
 
                                     @if ($errors->has('mhs_linkedin'))
                                         <span class="invalid-feedback" role="alert">
@@ -187,7 +189,7 @@
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-secondary">
-                                        {{ __('Perbarui') }}
+                                        {{ __('Kirim') }}
                                     </button>
                                 </div>
                             </div>
@@ -200,7 +202,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8" id="form-dsn">
                 <div class="card" style="background-color:#ffce22">
-                    <div class="card-header">{{ __('Perbarui Profil') }}</div>
+                    <div class="card-header">{{ __('Isi Profil') }}</div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('fill_profile') }}">
@@ -226,14 +228,14 @@
                                 <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Jenis Kelamin') }}</label>
 
                                 <div class="col-md-6">
-                                    <select id="gender" class="form-control{{ $errors->has('gender') ? ' is-invalid' : '' }}" name="jenis_kelamin" value="{{ old('gender') }}" required autofocus>
+                                    <select id="gender" class="form-control{{ $errors->has('jenis_kelamin') ? ' is-invalid' : '' }}" name="jenis_kelamin" required autofocus>
                                         <option value="Pria">Pria</option>
                                         <option value="Wanita">Wanita</option>
                                     </select>
 
-                                @if ($errors->has('gender'))
+                                @if ($errors->has('jenis_kelamin'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('gender') }}</strong>
+                                        <strong>{{ $errors->first('jenis_kelamin') }}</strong>
                                     </span>
                                 @endif
                                 </div>
@@ -257,7 +259,7 @@
                                 <label for="alamat" class="col-md-4 col-form-label text-md-right">{{ __('Alamat Tinggal') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="alamat" type="text" class="form-control{{ $errors->has('mhs_alamat_rmh') ? ' is-invalid' : '' }}" name="dsn_alamat_rmh" required>
+                                    <input id="alamat" type="text" class="form-control{{ $errors->has('dsn_alamat_rmh') ? ' is-invalid' : '' }}" name="dsn_alamat_rmh" required>
                                     @if ($errors->has('dsn_alamat_rmh'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('dsn_alamat_rmh') }}</strong>
@@ -305,7 +307,7 @@
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-secondary">
-                                        {{ __('Perbarui') }}
+                                        {{ __('Kirim') }}
                                     </button>
                                 </div>
                             </div>

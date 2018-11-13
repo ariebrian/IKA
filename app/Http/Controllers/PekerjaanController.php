@@ -33,6 +33,17 @@ class PekerjaanController extends Controller
     }
 
     /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit()
+    {
+        return view('layouts.updatepekerjaan');
+    }
+    
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -59,18 +70,6 @@ class PekerjaanController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
-        
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
     {
         //
     }
