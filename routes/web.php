@@ -30,8 +30,7 @@ Route::get('/test', 'HomeController@user')->name('user');
 // Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::get('/dashboard', 'ProfileController@index')->name('home');
 
-Route::get('/my_profile/{id}', 'ProfileController@show_profile')->name('mhs-profile/{id}');
-Route::get('/profile/{id}', 'ProfileController@other_profile')->name('profile/{id}');
+Route::get('/profile/{id}', 'ProfileController@show_profile')->name('profile/{id}');
 Route::get('/mahasiswa', 'ProfileController@all')->name('mahasiswa');
 Route::get('/add', 'ProfileController@add')->name('add-profile');
 Route::get('/edit/{id}', 'ProfileController@edit')->name('edit-profile/{id}');
@@ -50,4 +49,3 @@ Route::get('/forum/{id}', 'ForumController@show')->name('forumid')->middleware('
 // Just for test, delete if you will fix it
 Route::get('/news', 'NewsController@index')->name('news');
 Route::get('/subforum', 'SubForumController@index')->name('subforum');
-

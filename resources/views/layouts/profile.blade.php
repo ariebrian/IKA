@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-lg-3">
             <div class="card" style="width: 100%; background-color: #3e3e3e;">
                 <img class="card-img-top" style="width:100%;" src="{{ asset('icon/default-profile-picture.png') }}" alt="Card image cap">
                 <center>
@@ -13,24 +13,26 @@
                     <p class="card-text" style="color: #ffce22;">{{$mahasiswa->no_identitas}}</p>
                 </center>
                 <div class="card-body">
+                    @if ($mahasiswa->id === Auth::user()->id)
                     <center>
-                        <a href="/edit/{{auth()->id()}}" class="btn btn-warning" style="width: 10rem;">Perbarui Profil</a>
+                        <a href="/edit/{{auth()->id()}}" class="btn btn-warning" style="width: 100%;">Perbarui Profil</a>
                     </center>
                     <br>
                     <center>
-                        <a href="{{ route('edit-work') }}" class="btn btn-warning" style="width: 10rem;">Perbarui Pekerjaan</a>
+                        <a href="{{ route('edit-work') }}" class="btn btn-warning" style="width: 100%;">Perbarui Pekerjaan</a>
                     </center>
+                    @endif
                     @if ($mahasiswa->linkedin == NULL)
                     @else
                     <br>
                     <center>
-                        <a href="{{$mahasiswa->linkedin}}" class="btn btn-primary" style="width: 10rem;" target="_blank">Menuju LinkedIn</a>
+                        <a href="{{$mahasiswa->linkedin}}" class="btn btn-primary" style="width: 100%;" target="_blank">Menuju LinkedIn</a>
                     </center>
                     @endif
                 </div>
             </div>
         </div>
-        <div class="col-md-9">
+        <div class="col-lg-9">
             <div class="card" style="width: 100%; background-color: #ffce22;">
                 <div class="card-header"><h4>{{ __('PROFIL SAYA') }}</h4></div>
                 <div class="card-body" id="profile-content">

@@ -78,7 +78,7 @@
                             </ul>
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="{{ Request::segment(1) === 'home' ? 'active' : null }}" href="{{ route('home') }}">{{ __('Beranda') }}</a>
+                                    <a class="{{ Request::segment(1) === 'dashboard' ? 'active' : null }}" href="{{ route('home') }}">{{ __('Dasbor') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="{{ Request::segment(1) === 'forum' ? 'active' : null }}" href="{{ route('forum') }}">{{ __('Forum') }}</a>
@@ -95,7 +95,7 @@
                                         <img src="{{ asset('icon/profile.png') }}" style="height:20px">
                                     </a>
                                     <div id="profile-submenu" class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="/my_profile/{{auth()->id()}}">Profile</a>
+                                        <a class="dropdown-item" href="/profile/{{auth()->id()}}">Profile</a>
                                         <a class="dropdown-item font-weight-bold" href="#" onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a>
                                     </div>

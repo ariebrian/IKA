@@ -98,7 +98,7 @@ class ProfileController extends Controller
         ];
 
         // dd($result);
-        return view('layouts.otherprofile', $result);
+        return view('layouts.profile', $result);
     }
 
     public function add()
