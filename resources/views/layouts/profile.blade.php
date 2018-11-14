@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-lg-3">
+        <div class="col-md-3">
             <div class="card" style="width: 100%; background-color: #3e3e3e;">
                 <img class="card-img-top" style="width:100%;" src="{{ asset('icon/default-profile-picture.png') }}" alt="Card image cap">
                 <center>
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-9">
+        <div class="col-md-9">
             <div class="card" style="width: 100%; background-color: #ffce22;">
                 <div class="card-header"><h4>{{ __('PROFIL SAYA') }}</h4></div>
                 <div class="card-body" id="profile-content">

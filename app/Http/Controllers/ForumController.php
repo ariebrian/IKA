@@ -49,6 +49,10 @@ class ForumController extends Controller
             'counts' => $count,
         ];
         dd($data);
-        
+    }
+
+    public function add()
+    {
+        return view('layouts.addforum');
     }
 }

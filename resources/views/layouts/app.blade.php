@@ -15,7 +15,6 @@
     <!-- Styles -->
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> -->
@@ -69,11 +68,13 @@
                         @else
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item">
-                                    <h5 style="color: gray;">
-                                        {{ date('H') >= 6 && date('H') < 12 ? 'Selamat Pagi' : 
-                                            date('H') >= 12 && date('H') < 16 ? 'Selamat Siang' :
-                                            date('H') >= 16 && date('H') < 18 ? 'Selamat Sore' : 'Selamat Malam' }}, {{ Auth::user()->nama }}
-                                    </h5>
+                                    <center>
+                                        <h5 style="color: gray;">
+                                            {{ date('H') >= 6 && date('H') < 12 ? 'Selamat Pagi' : 
+                                                date('H') >= 12 && date('H') < 16 ? 'Selamat Siang' :
+                                                date('H') >= 16 && date('H') < 18 ? 'Selamat Sore' : 'Selamat Malam' }}, {{ Auth::user()->nama }}
+                                        </h5>
+                                    </center>
                                 </li>
                             </ul>
                             <ul class="navbar-nav ml-auto">

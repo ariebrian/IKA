@@ -5,12 +5,8 @@
 @section('content')
 <div class="title text-center p-5">
     <h1 class="display-4">Keluarga HIMATIF FMIPA Unpad</h1>
-    <div class="profile-tab row">
-        <div class="col-md-3 offset-md-3"><a href="#">Dosen</a></div>
-        <div class="col-md-3"><a href="#">Mahasiswa</a></div>
-    </div>
-
 </div>
+
 <div class="search-containter">
     <center>
         <div class="col-4">
@@ -31,7 +27,7 @@
     <div class="container">
         <div class="row text-center">
             @foreach($mahasiswa as $mhs)
-            <div class="col-md-3 p-2">
+            <div class="col-md-2 p-2">
                 <a href="/profile/{{$mhs->user_id}}">
                     <div class="profile-item">                    
                         <div class="profile-image">
