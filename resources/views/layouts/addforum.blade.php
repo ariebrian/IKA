@@ -34,7 +34,7 @@
                             <label for="konten" class="col-md-4 col-form-label text-md-right">{{ __('Konten') }}</label>
 
                             <div class="col-md-6">
-                                <textarea id="konten" type="text" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="deskripsi" rows="4"></textarea>
+                                <textarea id="konten" type="text" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="deskripsi" rows="6"></textarea>
                             </div>
                         </div>
 
