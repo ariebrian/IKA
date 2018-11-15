@@ -21,24 +21,24 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
-    
-    <!-- <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
+
+    <script type="text/javascript">
+        function showTime() {
+            var date = new Date(),
+                utc = new Date(Date.UTC(
+                date.getFullYear(),
+                date.getMonth(),
+                date.getDate(),
+                date.getHours(),
+                date.getMinutes(),
+                date.getSeconds()
+                ));
+
+            document.getElementById('time').innerHTML = utc.toLocaleTimeString();
         }
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(e) {
-            if (!e.target.matches('.dropbtn')) {
-                var myDropdown = document.getElementById("myDropdown");
-                if (myDropdown.classList.contains('show')) {
-                    myDropdown.classList.remove('show');
-                }
-            }
-        }
-    </script> -->
+        setInterval(showTime, 1000);
+    </script>
 </head>
 <body class="bodybg">
     <div id="app">
@@ -68,11 +68,8 @@
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item">
                                     <center>
-                                        <h5 style="color: gray;">
-                                            {{ date('H') >= 6 && date('H') < 12 ? 'Selamat Pagi' : 
-                                                date('H') >= 12 && date('H') < 16 ? 'Selamat Siang' :
-                                                date('H') >= 16 && date('H') < 18 ? 'Selamat Sore' : 'Selamat Malam' }}, {{ Auth::user()->nama }}
-                                        </h5>
+                                        <div style="color: yellow;">{{ Carbon\Carbon::now()->formatLocalized('%A, %d %B %Y') }}</div>
+                                        <div id="time" style="color: yellow;"></div>
                                     </center>
                                 </li>
                             </ul>

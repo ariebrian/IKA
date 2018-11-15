@@ -4,6 +4,11 @@
 
 @section('content')
 <div class="title text-center p-5">
+    <h1>
+        {{ date('H') >= 6 && date('H') < 12 ? 'Selamat Pagi' : 
+            date('H') >= 12 && date('H') < 16 ? 'Selamat Siang' :
+            date('H') >= 16 && date('H') < 18 ? 'Selamat Sore' : 'Selamat Malam' }}, {{ Auth::user()->nama }}
+    </h1>
     <h1 class="display-4">Keluarga HIMATIF FMIPA Unpad</h1>
 </div>
 
@@ -28,7 +33,7 @@
     <div class="container">
         <div class="row text-center">
             @foreach($mahasiswa as $mhs)
-            <div class="col-md-2 p-2">
+            <div class="col-4 col-md-2 p-2">
                 <a href="/profile/{{$mhs->user_id}}">
                     <div class="profile-item">                    
                         <div class="profile-image">
