@@ -16,7 +16,22 @@
         1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
         recently with
         desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
+</div>
+<div class="search-containter card">
+    <center>
+        <div class="col-5">
+            <div id="custom-search-input">
+                <div class="input-group">
+                    <input type="text" class="search-query form-control" placeholder="Search" />
+                    <span class="input-group-btn">
+                        <button type="button" disabled>
+                            <span class="fa fa-search yellow"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </center>
 </div>
 <div class="forum-list">
     <div class="header-container row">
