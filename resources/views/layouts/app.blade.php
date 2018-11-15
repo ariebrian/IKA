@@ -15,10 +15,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
@@ -43,7 +42,7 @@
 </head>
 <body class="bodybg">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark p-0 topnav">
+        <nav class="navbar navbar-expand-md navbar-dark p-0 topnav sticky-top">
             <div class="container">
                 <a href="{{ route('home') }}" class="navbar-brand">
                     <img src="{{ asset('icon/IKAMOCKUP.png') }}" class="logo">
@@ -90,21 +89,15 @@
                                 </li>
                                 
                                 <!-- Dropdown -->
-                                
-                                <li class="dropdown">
+                                <li class="dropdown nav-item">
                                     <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                         <img src="{{ asset('icon/profile.png') }}" style="height:20px"><span class="caret"></span>
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Start Learning</a></li>
-                                        <li><a href="#">View All Courses</a></li>
-                                        <li><a href="#">Chat with a CodeGuide</a></li>
-                                    </ul>
-                                    <!-- <div id="profile-submenu" class="dropdown-menu dropdown-menu-right">
+                                    <div id="profile-submenu" class="dropdown-menu dropdown-menu-right">
                                         <a class="dropdown-item" href="/profile/{{auth()->id()}}">Profile</a>
                                         <a class="dropdown-item font-weight-bold" href="#" onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a>
-                                    </div> -->
+                                    </div>
                                 </li>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
