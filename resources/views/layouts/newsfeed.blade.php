@@ -18,22 +18,6 @@
         desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
 </div>
-<div class="search-containter">
-    <center>
-        <div class="col-4">
-            <div id="custom-search-input">
-                <div class="input-group">
-                    <input type="text" class="search-query form-control" placeholder="Search" />
-                    <span class="input-group-btn">
-                        <button type="button" disabled>
-                            <span class="fa fa-search yellow"></span>
-                        </button>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </center>
-</div>
 <div id="newsfeed-content">
     <div id="newsfeed-list" class="container">
         <?php for($i=0; $i<3; $i++): ?>

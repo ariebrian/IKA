@@ -9,7 +9,7 @@
 
 <div class="search-containter">
     <center>
-        <div class="col-4">
+        <div class="col-5 card">
             <div id="custom-search-input">
                 <div class="input-group">
                     <input type="text" class="search-query form-control" placeholder="Search" />
