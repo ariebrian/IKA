@@ -34,9 +34,11 @@
             </div>
             <br>
             <br>
-            <form method="POST" action="#">
+            <form method="POST" action="{{route('storereply')}}">
+                @csrf
                 <div class="row">
                     <div class="col-md-7 offset-3">
+                        <input type="hidden" name="id_forum" value="{{$forum->id}}">
                         <textarea rows="1" name="content_reply" style="width:100%; height:100%;" placeholder="Tulis balasan anda di sini..."></textarea>
                     </div>
                     <div class="col-md-1">

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Reply;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class ReplyController extends Controller
 {
@@ -35,7 +37,17 @@ class ReplyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $reply = new Reply;
+
+        $reply->reply = $request->content_reply;
+        $reply->forum_id = $request->id_forum;
+        $reply->user_id = Auth::user()->id;
+        // dd($reply);
+        $reply->save();
+
+        return redirect()->action(
+            'ForumController@show', ['id' => $reply->forum_id]
+        );
     }
 
     /**

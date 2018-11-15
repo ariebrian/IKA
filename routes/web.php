@@ -47,6 +47,7 @@ Route::get('/forum', 'ForumController@index')->name('forum')->middleware('auth')
 Route::get('/forum/{id}', 'ForumController@show')->name('forumid')->middleware('auth');
 Route::get('/start_forum', 'ForumController@add')->name('addforum')->middleware('auth');
 Route::post('/add_forum', 'ForumController@store')->name('storeforum')->middleware('auth');
+Route::post('/add_reply', 'ReplyController@store')->name('storereply')->middleware('auth');
 
 // Just for test, delete if you will fix it
 Route::get('/news', 'NewsController@index')->name('news');
