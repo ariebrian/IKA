@@ -3,6 +3,8 @@
 @section('pageTitle', 'Newsfeed')
 
 @section('content')
+
+<!-- Header Section -->
 <div class="title text-center p-5">
     <h1 class="display-4">Newsfeed</h1>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -18,6 +20,26 @@
         desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
 </div>
+<<<<<<< HEAD
+=======
+
+<!-- Search Section-->
+<div class="search-containter">
+    <div class="container">
+        <div id="custom-search-input">
+            <div class="input-group">
+                <input type="text" class="search-query form-control" placeholder="Cari" />
+                <span class="input-group-btn">
+                    <button type="button" disabled>
+                        <span class="fa fa-search"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+>>>>>>> 84452d92daf6da3365cb723710bdde1f24f45978
 <div id="newsfeed-content">
     <div id="newsfeed-list" class="container">
         <?php for($i=0; $i<3; $i++): ?>

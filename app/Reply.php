@@ -13,11 +13,11 @@ class Reply extends Model
 
     public function forum()
     {
-        $this->belongsTo('App\Forum');
+        return $this->belongsTo('App\Forum');
     }
 
     public function user()
     {
-        $this->belongsTo('App\User');
+        return $this->belongsTo('App\User');
     }
 }

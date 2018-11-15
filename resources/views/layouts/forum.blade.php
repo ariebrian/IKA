@@ -40,7 +40,7 @@
         <div id="forum-last-post" class="col-md-3">Last Post</div>
     </div>
     @foreach ($forums as $forum)
-        <a href="#">
+        <a href="/forum/{{$forum->id}}">
             <div class="forum-item row">
                 <div class="forum-title col-md-6">
                     <h5>{{ $forum->title }}</h5>

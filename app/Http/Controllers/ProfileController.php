@@ -71,7 +71,7 @@ class ProfileController extends Controller
             return redirect('/add');
         }
         else{
-            $mhs = $mahasiswa->pekerjaan->toArray();
+            // $mhs = $mahasiswa->pekerjaan->toArray();
         // dd($mhs);
         $result =[
             'mahasiswa' => $mahasiswa,

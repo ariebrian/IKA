@@ -44,6 +44,6 @@ class User extends Authenticatable
 
     public function reply()
     {
-        $this->hasMany('App\Reply');
+        return $this->hasMany('App\Reply');
     }
 }

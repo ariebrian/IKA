@@ -19,7 +19,7 @@
                 <div class="card-header">{{ __('Mulai Sebuah Forum') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('update_work') }}">
+                    <form method="POST" action="{{ route('storeforum') }}">
                         @csrf
 
                         <div class="form-group row">
