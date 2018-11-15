@@ -29,7 +29,8 @@ class ForumController extends Controller
      */
     public function index()
     {
-        $forums = DB::select('select * from forums');
+        $forums = Forum::with('user')->get();
+        // dd($forums);
         return view('layouts.forum',['forums'=>$forums]);
     }
 
@@ -40,15 +41,15 @@ class ForumController extends Controller
      */
     public function show($id)
     {
-        $forum = Forum::find($id);
-        $creator = User::where('id',$forum->user_id)->first();
+        $forum = Forum::with('user')->where('id',$id)->first();
+        // dd($forum);
+        // $creator = User::where('id',$forum->user_id)->first();
         // $replies = DB::select('select * from replies where forum_id = ?', [$forum->id]);
-        $replies = Reply::where('forum_id',$forum->id)->get();
+        $replies = Reply::with('user')->where('forum_id',$forum->id)->get();
         // dd($replies);
         $count = DB::table('replies')->where('forum_id',[$forum->id])->count();
         $data = [
             'forum' => $forum,
-            'creator' => $creator,
             'replies' => $replies,
             'counts' => $count,
         ];

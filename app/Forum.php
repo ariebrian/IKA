@@ -19,7 +19,7 @@ class Forum extends Model
         return $this->hasMany('App\Reply');
     }
 
-    public function forum()
+    public function user()
     {
         return $this->belongsTo('App\User');
     }

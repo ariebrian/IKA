@@ -17,7 +17,7 @@
                     <img src="{{ asset('icon/default-profile-picture.png') }}" alt="">
                 </div>
                 <div id="user-name" class="col-md-9 align-middle">
-                    <h3>{{$forum->forum}}</h3>
+                    <h3>{{$forum->user->nama}}</h3>
                 </div>
                 <label class="col-md-2 text-center align-middle" for="">22/10/2018 19:00</label>
             </div>
@@ -69,7 +69,7 @@
                     <img src="{{ asset('icon/default-profile-picture.png') }}" alt="">
                 </div>
                 <div id="user-name" class="col-md-9 align-middle">
-                    <h3>{{$reply->user()}}</h3>
+                    <h3>{{$reply->user->nama}}</h3>
                 </div>
                 <label class="col-md-2 text-center align-middle" for="">22/10/2018 19:00</label>
             </div>

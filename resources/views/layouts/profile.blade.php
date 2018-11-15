@@ -99,12 +99,12 @@
                     <div class="row">
                         <p>{{$mahasiswa->no_wa}}</p>
                     </div>
-                    @foreach ($pekerjaan as $work)
+                    @foreach ($mahasiswa->pekerjaan as $work)
                     <div class="row">
                         <h5>Tempat kerja:</h5>
                     </div>
                     <div class="row">
-                        <p>{{$work['tempat_kerja']}}</p>
+                        <p>{{$work->tempat_kerja}}</p>
                     </div>
                     @endforeach
                 </div>
