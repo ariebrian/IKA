@@ -5,6 +5,10 @@
 @section('content')
 <div class="title text-center p-5">
     <h1 class="display-4">{{$forum->title}}</h1>
+    <br>
+    <center>
+        <a href="{{ route('forum')}}" class="btn btn-warning">Kembali ke Daftar Forum</a>
+    </center>
 </div>
 
 <div class="content-separator"></div>

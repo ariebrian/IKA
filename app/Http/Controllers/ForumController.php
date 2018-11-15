@@ -75,7 +75,7 @@ class ForumController extends Controller
 
         $forum->save();
 
-        dd($forum);
+        // dd($forum);
         
         return redirect()->action(
             'ForumController@show', ['id' => $forum->id]

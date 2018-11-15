@@ -9,7 +9,6 @@
 
 <!-- Search Section-->
 <div class="search-containter">
-<<<<<<< HEAD
     <center>
         <div class="col-5 card">
             <div id="custom-search-input">
@@ -21,17 +20,6 @@
                         </button>
                     </span>
                 </div>
-=======
-    <div class="container">
-        <div id="custom-search-input">
-            <div class="input-group">
-                <input type="text" class="search-query form-control" placeholder="Cari" />
-                <span class="input-group-btn">
-                    <button type="button" disabled>
-                        <span class="fa fa-search"></span>
-                    </button>
-                </span>
->>>>>>> 84452d92daf6da3365cb723710bdde1f24f45978
             </div>
         </div>
     </div>
