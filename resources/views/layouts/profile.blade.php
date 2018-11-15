@@ -107,6 +107,12 @@
                         <p>{{$work->tempat_kerja}}</p>
                     </div>
                     @endforeach
+                    <div class="row">
+                        <h5>Alamat Kerja:</h5>
+                    </div>
+                    <div class="row">
+                        <p>{{$work->alamat_kerja}}</p>
+                    </div>
                 </div>
             </div>
         </div>

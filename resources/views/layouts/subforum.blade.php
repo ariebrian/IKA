@@ -32,11 +32,20 @@
                     <p>{{$forum->description}}</p>  
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-2 offset-10 reply-button">
-                    <a href="#"><div class="">Balas</div></a>
+            <br>
+            <br>
+            <form method="POST" action="#">
+                <div class="row">
+                    <div class="col-md-7 offset-3">
+                        <textarea rows="1" name="content_reply" style="width:100%; height:100%;" placeholder="Tulis balasan anda di sini..."></textarea>
+                    </div>
+                    <div class="col-md-1">
+                        <button type="submit" class="btn btn-success">
+                            {{ __('Balas') }}
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
         <div class="pagination-container row">
             <label class="col-md-9"for="pagination">Halaman 1 dari 10</label>

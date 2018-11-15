@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
@@ -77,7 +77,7 @@
                                     </center>
                                 </li>
                             </ul>
-                            <ul class="navbar-nav ml-auto">
+                            <ul class=" nav navbar-nav ml-auto navbar-right">
                                 <li class="nav-item">
                                     <a class="{{ Request::segment(1) === 'dashboard' ? 'active' : null }}" href="{{ route('home') }}">{{ __('Dasbor') }}</a>
                                 </li>
@@ -91,15 +91,20 @@
                                 
                                 <!-- Dropdown -->
                                 
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                                        <img src="{{ asset('icon/profile.png') }}" style="height:20px">
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <img src="{{ asset('icon/profile.png') }}" style="height:20px"><span class="caret"></span>
                                     </a>
-                                    <div id="profile-submenu" class="dropdown-menu dropdown-menu-right">
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Start Learning</a></li>
+                                        <li><a href="#">View All Courses</a></li>
+                                        <li><a href="#">Chat with a CodeGuide</a></li>
+                                    </ul>
+                                    <!-- <div id="profile-submenu" class="dropdown-menu dropdown-menu-right">
                                         <a class="dropdown-item" href="/profile/{{auth()->id()}}">Profile</a>
                                         <a class="dropdown-item font-weight-bold" href="#" onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a>
-                                    </div>
+                                    </div> -->
                                 </li>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
