@@ -23,7 +23,7 @@
                 <div id="user-name" class="col-md-9 align-middle">
                     <h3>{{$forum->user->nama}}</h3>
                 </div>
-                <label class="col-md-2 text-center align-middle" for="">22/10/2018 19:00</label>
+                <label class="col-md-2 text-center align-middle" for="">{{Carbon\Carbon::parse($forum->created_at)->format('d F y H:i')}}</label>
             </div>
             <div class="row">
                 <div class="text-center col-md-2">
@@ -86,7 +86,7 @@
                 <div id="user-name" class="col-md-9 align-middle">
                     <h3>{{$reply->user->nama}}</h3>
                 </div>
-                <label class="col-md-2 text-center align-middle" for="">22/10/2018 19:00</label>
+                <label class="col-md-2 text-center align-middle" for="">{{Carbon\Carbon::parse($reply->created_at)->format('d F y H:i')}}</label>
             </div>
             <div class="row">
                 <div class="text-center col-md-12">
