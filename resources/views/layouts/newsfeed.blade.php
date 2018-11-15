@@ -20,8 +20,6 @@
         desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
 </div>
-<<<<<<< HEAD
-=======
 
 <!-- Search Section-->
 <div class="search-containter">
@@ -39,7 +37,6 @@
     </div>
 </div>
 
->>>>>>> 84452d92daf6da3365cb723710bdde1f24f45978
 <div id="newsfeed-content">
     <div id="newsfeed-list" class="container">
         <?php for($i=0; $i<3; $i++): ?>

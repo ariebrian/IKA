@@ -42,7 +42,7 @@
 </head>
 <body class="bodybg">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark p-0 topnav sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-dark p-0 topnav sticky-top">
             <div class="container">
                 <a href="{{ route('home') }}" class="navbar-brand">
                     <img src="{{ asset('icon/IKAMOCKUP.png') }}" class="logo">
@@ -78,7 +78,7 @@
                             </ul>
                             <ul class=" nav navbar-nav ml-auto navbar-right">
                                 <li class="nav-item">
-                                    <a class="{{ Request::segment(1) === 'dashboard' ? 'active' : null }}" href="{{ route('home') }}">{{ __('Dasbor') }}</a>
+                                    <a class="{{ Request::segment(1) === 'dashboard' ? 'active' : null }}" href="{{ route('home') }}">{{ __('Dashboard') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="{{ Request::segment(1) === 'forum' ? 'active' : null }}" href="{{ route('forum') }}">{{ __('Forum') }}</a>
