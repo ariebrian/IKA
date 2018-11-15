@@ -7,22 +7,23 @@
     <h1 class="display-4">Keluarga HIMATIF FMIPA Unpad</h1>
 </div>
 
+<!-- Search Section-->
 <div class="search-containter">
-    <center>
-        <div class="col-4">
-            <div id="custom-search-input">
-                <div class="input-group">
-                    <input type="text" class="search-query form-control" placeholder="Search" />
-                    <span class="input-group-btn">
-                        <button type="button" disabled>
-                            <span class="fa fa-search yellow"></span>
-                        </button>
-                    </span>
-                </div>
+    <div class="container">
+        <div id="custom-search-input">
+            <div class="input-group">
+                <input type="text" class="search-query form-control" placeholder="Cari" />
+                <span class="input-group-btn">
+                    <button type="button" disabled>
+                        <span class="fa fa-search"></span>
+                    </button>
+                </span>
             </div>
         </div>
-    </center>
+    </div>
 </div>
+
+<!-- Profile List Section -->
 <div class="profile-list">
     <div class="container">
         <div class="row text-center">
