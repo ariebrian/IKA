@@ -76,7 +76,7 @@ class ProfileController extends Controller
         // dd($mhs);
         $result =[
             'mahasiswa' => $mahasiswa,
-            'pekerjaan' => $mhs,
+            // 'pekerjaan' => $mhs,
         ];
 
         // dd($result);
