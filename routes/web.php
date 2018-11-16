@@ -24,7 +24,7 @@ Auth::routes();
 // Route::get('/signin', 'AuthController@login_view')->name('login-view');
 // Route::post('/signin', 'AuthController@login')->name('sign-in');
 
-Route::get('/home', 'ProfileController@index')->name('home');
+// Route::get('/home', 'ProfileController@index')->name('home');
 Route::get('/test', 'HomeController@user')->name('user');
 
 // Route::get('/profile', 'ProfileController@index')->name('profile');

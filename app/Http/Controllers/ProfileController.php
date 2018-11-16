@@ -174,6 +174,8 @@ class ProfileController extends Controller
         $mahasiswa->linkedin = $request->mhs_linkedin;
         $mahasiswa->user_id = $user->id;
 
+        $request->avatar->storeAs('avatars',$avatarName);
+        
         $mahasiswa->save();
 
         return redirect()->action(
