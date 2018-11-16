@@ -27,6 +27,7 @@
         <div id="forum-stats" class="col-md-3">Forum Creator</div>
         <div id="forum-last-post" class="col-md-3">Date Created</div>
     </div>
+    {{$forums->links()}}
     @foreach ($forums as $forum)
         <a href="/forum/{{$forum->id}}" target="_blank">
             <div class="forum-item row">
@@ -45,7 +46,7 @@
             </div>
         </a>
     @endforeach
-
+    {{$forums->links()}}
     <div class="btn-group-sm hidden" id="mini-fab">
         <div class="btn-group">
             <a href="{{ route('addforum') }}" class="btn btn-success btn-fab" id="main">

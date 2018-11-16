@@ -50,8 +50,8 @@
             </form>
         </div>
         <div class="pagination-container row">
-            <label class="col-md-9"for="pagination">Halaman 1 dari 10</label>
-            <nav class="col-md-3">
+            <!-- <label class="col-md-9"for="pagination">Halaman 1 dari 10</label> -->
+            <!-- <nav class="col-md-3">
                 <ul class="pagination">
                     <li class="page-item">
                         <a class="page-link" href="#" aria-label="Previous">
@@ -75,7 +75,8 @@
                         </a>
                     </li>
                 </ul>
-            </nav>
+            </nav> -->
+            {{$replies->links()}}
         </div>
         @foreach($replies as $reply)
         <div class="post-item">
@@ -102,6 +103,7 @@
             </div>
         </div>
         @endforeach
+        {{$replies->links()}}
     </div>
 </div>
 @endsection
