@@ -35,8 +35,8 @@
 <div class="forum-list">
     <div class="header-container row">
         <div id="forum-title" class="col-md-6">Forum Title</div>
-        <div id="forum-stats" class="col-md-3">Stats</div>
-        <div id="forum-last-post" class="col-md-3">Last Post</div>
+        <div id="forum-stats" class="col-md-3">Forum Creator</div>
+        <div id="forum-last-post" class="col-md-3">Date Created</div>
     </div>
     @foreach ($forums as $forum)
         <a href="/forum/{{$forum->id}}" target="_blank">
@@ -46,12 +46,12 @@
                     <label>{{ $forum->description }}</label>
                 </div>
                 <div class="forum-stats col-md-3">
-                    <b>Replies:</b> 34<br>
-                    <b>Views:</b> 123
+                    <b>{{$forum->user->nama}}</b><br>
+                    <b>{{$forum->user->no_identitas}}</b>
                 </div>
                 <div class="forum-last-post col-md-3">
                     <p>{{$forum->first_post}}</p>
-                    <span class="date">9/12/2018</span> <span class="time">20:50</span>
+                    <span class="date">{{Carbon\Carbon::parse($forum->created_at)->format('d F Y')}}</span>
                 </div>
             </div>
         </a>
