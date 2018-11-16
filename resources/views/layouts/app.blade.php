@@ -22,23 +22,6 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
-    <script type="text/javascript">
-        function showTime() {
-            var date = new Date(),
-                utc = new Date(Date.UTC(
-                date.getFullYear(),
-                date.getMonth(),
-                date.getDate(),
-                date.getHours(),
-                date.getMinutes(),
-                date.getSeconds()
-                ));
-
-            document.getElementById('time').innerHTML = utc.toLocaleTimeString();
-        }
-
-        setInterval(showTime, 1000);
-    </script>
 </head>
 <body class="bodybg">
     <div id="app">
@@ -65,14 +48,6 @@
                                     <a href="{{ url('/') }}">{{ __('Kembali') }}</a>
                                 </li>
                         @else
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item">
-                                    <center>
-                                        <div style="color: yellow;">{{ Carbon\Carbon::now()->formatLocalized('%A, %d %B %Y') }}</div>
-                                        <div id="time" style="color: yellow;"></div>
-                                    </center>
-                                </li>
-                            </ul>
                             <ul class=" nav navbar-nav ml-auto navbar-right">
                                 <li class="nav-item">
                                     <a class="{{ Request::segment(1) === 'dashboard' ? 'active' : null }}" href="{{ route('home') }}">{{ __('Dashboard') }}</a>
