@@ -301,9 +301,11 @@
 	background-color: #FFD51E;
 	min-height: 600px;
 }
-
+.forum-item, .forum-list > div{
+	margin: 0 0 1px 0 !important;
+}
 .forum-item:hover{
-	background-color: orangered;
+	background-color: #ffce22;
 }
 
 .forum-list > div{
