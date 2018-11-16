@@ -81,4 +81,11 @@ class ForumController extends Controller
             'ForumController@show', ['id' => $forum->id]
         );
     }
+
+    public function delete($id)
+    {
+        Forum::find($id)->delete();
+
+        return redirect()->routes('forum');
+    }
 }
