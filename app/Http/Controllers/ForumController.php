@@ -29,7 +29,7 @@ class ForumController extends Controller
      */
     public function index()
     {
-        $forums = Forum::with('user')->get();
+        $forums = Forum::with('user')->paginate(5);
         // dd($forums);
         return view('layouts.forum',['forums'=>$forums]);
     }
@@ -45,7 +45,7 @@ class ForumController extends Controller
         // dd($forum);
         // $creator = User::where('id',$forum->user_id)->first();
         // $replies = DB::select('select * from replies where forum_id = ?', [$forum->id]);
-        $replies = Reply::with('user')->where('forum_id',$forum->id)->get();
+        $replies = Reply::with('user')->where('forum_id',$forum->id)->paginate(8);
         // dd($replies);
         $count = DB::table('replies')->where('forum_id',[$forum->id])->count();
         $data = [
@@ -80,5 +80,12 @@ class ForumController extends Controller
         return redirect()->action(
             'ForumController@show', ['id' => $forum->id]
         );
+    }
+
+    public function delete($id)
+    {
+        Forum::find($id)->delete();
+
+        return redirect()->routes('forum');
     }
 }

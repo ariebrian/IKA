@@ -256,11 +256,19 @@
 	color:white;
 }
 
-.news-item h2{
+.news-item > h2{
 	font-size: 36pt;
 	margin-bottom: 0;
 }
 
+.news-item > h2 > a{
+	color: white;
+} 
+
+.news-item > h2 > a:hover{
+	color: white;
+	text-decoration: white;
+}
 .image-content{
 	text-align: center;
 }
@@ -269,15 +277,35 @@
 	width: 95%;
 }
 
+.readmore-button{
+	background:  #2f2f2f;
+	padding: 7px;
+	border-radius: 5px;
+	color: white;
+	transition: 0.1s;
+}
+
+.readmore-button:hover{
+	background: #3e3e3e;
+	color: white;
+	text-decoration: none;
+}
+
+.readmore-button:active{
+	transform: scale(0.975);
+}
+
 
 /* ===================== Forum ====================  */
 .forum-list{
 	background-color: #FFD51E;
 	min-height: 600px;
 }
-
+.forum-item, .forum-list > div{
+	margin: 0 0 1px 0 !important;
+}
 .forum-item:hover{
-	background-color: orangered;
+	background-color: #ffce22;
 }
 
 .forum-list > div{
@@ -384,8 +412,26 @@
 .content-separator{
 	background-color: #3e3e3e;
 	height: 50px;
+	color: white;
 }
 
+.content-separator > div{
+	height: 100%;
+	/* vertical-align: middle;s */
+}
+
+.content-separator > div > div{
+	padding: 10px 0;
+}
+
+.content-separator a{
+	color: white;
+}
+
+.content-separator a:hover{
+	color: rgba(255, 255, 255, 0.75);
+	text-decoration: none;	
+}
 .news-more{
 	padding: 20px;
 	color:  white;

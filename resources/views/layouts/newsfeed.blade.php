@@ -7,7 +7,7 @@
 <!-- Header Section -->
 <div class="title text-center p-5">
     <h1 class="display-4">Newsfeed</h1>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+    <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
         been the
         industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
         of type
@@ -17,7 +17,7 @@
         in the
         1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
         recently with
-        desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> -->
 
 </div>
 
@@ -41,7 +41,7 @@
     <div id="newsfeed-list" class="container">
         <?php for($i=0; $i<3; $i++): ?>
         <div class="news-item">
-            <h2>Judul Artikel</h2>
+            <h2><a href="/news">Judul Artikel</a></h2>
             <label for="">12 September 2018 by Informatika</label>
             <div class="row">
                 <div class="image-content col-md-4">
@@ -59,7 +59,7 @@
                         1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
                         recently with
                         desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <a href="#" class="float-right">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    <a href="/news" class="float-right readmore-button">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
