@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-3">
             <div class="card" style="width: 100%; background-color: #3e3e3e;">
-                <img class="card-img-top" style="width:100%;" src="{{ asset('icon/default-profile-picture.png') }}" alt="Card image cap">
+                    <img class="rounded-circle card-img-top" style="width:100%;" src="{{ asset('icon/default-profile-picture.png') }}" alt="Card image cap">
                 <center>
                     <h4 class="card-title" style="color: #ffce22;">{{$mahasiswa->nama}}</h4>
                     <p class="card-text" style="color: #ffce22;">{{$mahasiswa->no_identitas}}</p>
