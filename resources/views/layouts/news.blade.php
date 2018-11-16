@@ -4,16 +4,22 @@
 
 @section('content')
 <div class="title text-center p-5">
-    <h1 class="display-4">Newsfeed</h1>
+    <h1 class="display-4"> News </h1>
 </div>
 
-<div class="content-separator"></div>
+<div class="content-separator">
+    <div class="container">
+        <div>
+            <a href="/newsfeed">Newsfeed</a>  >  <a href="">Title</a> 
+        </div>
+    </div>
+</div>
 
 <div id="newsfeed-content">
     <div id="newsfeed-list" class="container">
         <div class="news-item">
             <h2>Judul Artikel</h2>
-            <label for="">12 September 2018 by Informatika</label>
+            <label for="">12 September 2018 oleh Informatika</label>
             <div class="row">
                 <div class="text-center col-md-12">
                     <img src="{{ asset('icon/default-profile-picture.png') }}" alt="">
